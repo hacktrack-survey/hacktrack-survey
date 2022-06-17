@@ -1,0 +1,290 @@
+{
+    "individual-measures": {
+        "static": true,
+        "index": 1,
+        "elements": [
+            {
+                "Motivation": {
+                    "static": true,
+                    "index": [2]
+                }
+            },
+            {
+                "MotivationOther": {
+                    "static": true,
+                    "index": [3]
+                }
+            },
+            {
+                "EventParticipation": {
+                    "static": true,
+                    "index": [4]
+                }
+            }
+        ]
+    },
+    "team-composition": {
+        "static": true,
+        "index": 5,
+        "elements": [
+            {
+                "TeamId": {
+                    "static": true,
+                    "index": [6]
+                }
+            },
+            {
+                "TeamSize": {
+                    "static": true,
+                    "index": [7]
+                }
+            },
+            {
+                "CodeRepo": {
+                    "static": true,
+                    "index": [8]
+                }
+            },
+            {
+                "ResourcesURL": {
+                    "static": true,
+                    "index": [9]
+                }
+            },
+            {
+                "TeamLeader": {
+                    "static": true,
+                    "index": [10]
+                }
+            },
+            {
+                "TeamManager": {
+                    "static": false,
+                    "index": [11]
+                }
+            },
+            {
+                "SocialLeader": {
+                    "static": false,
+                    "index": [12]
+                }
+            },
+            {
+                "TeamFamiliarity": {
+                    "static": true,
+                    "index": [13]
+                }
+            }
+        ]
+    },
+    "team-process": {
+        "static": true,
+        "index": 14,
+        "elements": [
+            {
+                "SatisfactionWithProcess": {
+                    "static": true,
+                    "index": [15,16,17,18]
+                }
+            },
+            {
+                "GoalClarity": {
+                    "static": true,
+                    "index": [19]
+                }
+            },
+            {
+                "Voice": {
+                    "static": true,
+                    "index": [20]
+                }
+            }
+        ]
+    },
+    "project-measures": {
+        "static": true,
+        "index": 21,
+        "elements": [
+            {
+                "SatisfactionWithOutcome": {
+                    "static": true,
+                    "index": [22]
+                }
+            },
+            {
+                "PerceivedUsefulness": {
+                    "static": false,
+                    "index": [23]
+                }
+            },
+            {
+                "ContinuationIntention": {
+                    "static": false,
+                    "index": [24]
+                }
+            },
+            {
+                "BehavioralControl": {
+                    "static": false,
+                    "index": [25]
+                }
+            }
+        ]
+    },
+    "mentoring": {
+        "static": false,
+        "index": 26,
+        "elements": [
+            {
+                "MentoringExperience": {
+                    "static": false,
+                    "index": [27]
+                }
+            },
+            {
+                "MentoringOther": {
+                    "static": false,
+                    "index": [28]
+                }
+            }
+        ]
+    },
+    "community-measures": {
+        "static": false,
+        "index": 29,
+        "elements": [
+            {
+                "CommunityIdentification": {
+                    "static": false,
+                    "index": [30]
+                }
+            },
+            {
+                "SocialCapital": {
+                    "static": false,
+                    "index": [31]
+                }
+            }
+        ]
+    },
+    "event-measures": {
+        "static": false,
+        "index": 32,
+        "elements": [
+            {
+                "SatisfactionWithHackathon": {
+                    "static": false,
+                    "index": [33,34,35,36]
+                }
+            },
+            {
+                "FutureParticipationIntentions": {
+                    "static": false,
+                    "index": [37]
+                }
+            },
+            {
+                "RecommendationLikeliness": {
+                    "static": false,
+                    "index": [38]
+                }
+            },
+            {
+                "SessionSatisfaction": {
+                    "static": false,
+                    "index": [39]
+                }
+            },
+            {
+                "SessionUsefulness": {
+                    "static": false,
+                    "index": [40]
+                }
+            },
+            {
+                "SessionEnjoyment": {
+                    "static": false,
+                    "index": [41]
+                }
+            },
+            {
+                "GoodEvent": {
+                    "static": false,
+                    "index": [42]
+                }
+            },
+            {
+                "ImproveEvent": {
+                    "static": false,
+                    "index": [43]
+                }
+            },
+            {
+                "OpenSharing": {
+                    "static": false,
+                    "index": [44]
+                }
+            }
+        ]
+    },
+    "individual-programming-experience": {
+        "static": false,
+        "index": 45,
+        "elements": [
+            {
+                "ProgrammingExperienceYears": {
+                    "static": false,
+                    "index": [46]
+                }
+            },
+            {
+                "ProgrammingExperienceComparison": {
+                    "static": false,
+                    "index": [47]
+                }
+            },
+            {
+                "ProgrammingAbility": {
+                    "static": false,
+                    "index": [48]
+                }
+            },
+            {
+                "ProgrammingComfort": {
+                    "static": false,
+                    "index": [49]
+                }
+            }
+        ]
+    },
+    "demographics-and-individual-background": {
+        "static": true,
+        "index": 50,
+        "elements": [
+            {
+                "Age": {
+                    "static": true,
+                    "index": [51]
+                }
+            },
+            {
+                "Gender": {
+                    "static": true,
+                    "index": [52]
+                }
+            },
+            {
+                "Education": {
+                    "static": false,
+                    "index": [53]
+                }
+            },
+            {
+                "Minority": {
+                    "static": true,
+                    "index": [54]
+                }
+            }
+        ]
+    }
+}

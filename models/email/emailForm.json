@@ -1,0 +1,13 @@
+{
+  "TemplateId": 28250705,
+  "TemplateModel": {
+    "hackathon_org": "hackathon_org_Value",
+    "hackathon_name": "hackathon_name_Value",
+    "form_uuid": "form_url_Value",
+    "form_answerurl": "form_url_Value"
+  },
+  "InlineCss": true,
+  "From": "hehexd@hehexd.xyz",
+  "To": "receiver@hehexd.xyz",
+  "MessageStream": "outbound"
+}

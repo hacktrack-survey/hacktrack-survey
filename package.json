@@ -1,0 +1,40 @@
+{
+  "name": "hackathon-survey",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "SET DEBUG=hackathon-survey:* & npm run devstart",
+    "serverstart-unix": "DEBUG=hackathon-survey:* & npm run devstart"
+  },
+  "dependencies": {
+    "@cds/city": "^1.1.0",
+    "@cds/core": "^6.0.0",
+    "@clr/ui": "^13.4.0",
+    "@google-cloud/local-auth": "^1.0.1",
+    "@google-cloud/pubsub": "^3.0.1",
+    "@googleapis/forms": "^1.0.1",
+    "@types/google-apps-script": "^1.0.47",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "postmark": "^3.0.11",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.15"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "models/data/surveyDb.json"
+    ]
+  }
+}

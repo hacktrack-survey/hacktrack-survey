@@ -1,0 +1,19 @@
+{
+  "surveys": [
+    {
+      "formId": "1Z03Zq3KUNL5sbnP-OnQB0pxYKPrGLnHCDuDleltml08",
+      "uuid": "5e6dad8e-4b7b-4869-ba7a-54eee62dfd92",
+      "meta-data": {
+        "name": "A",
+        "date": "2022-06-18",
+        "event_url": "https://alex.de",
+        "competitive": true,
+        "mode": "mode_virtual",
+        "size": "size_s",
+        "roleOrganizer": "organizer",
+        "surveyPurpose": "purpose1",
+        "disclaimerCheck": "on"
+      }
+    }
+  ]
+}

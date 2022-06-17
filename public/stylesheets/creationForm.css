@@ -1,0 +1,115 @@
+body {
+    background-color: #E1F2F7;
+}
+h1{
+    color: #000000;
+}
+.top {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #E5BACE, #ddd 40%, #ccc);
+    text-align: center;
+    margin: 50px;
+    font-size: 18px
+}
+.informationAboutTheHackathon {
+    width: 35em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 10px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 10px;
+    font-size: 18px;
+    float: right;
+}
+.individualMeasures {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.teamProcess {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.projectMeasures {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.mentoring {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.communityMeasures {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.eventMeasures {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.individualProgrammingExperience {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.demographicsAndIndividualBackground {
+    width: 50em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 50px;
+    background-image: linear-gradient(180deg, #1BA098, #ddd 40%, #ccc);
+    text-align: left;
+    margin: 50px;
+    font-size: 18px
+}
+.senden {
+    padding: 35pxs;
+    cursor: pointer;
+    outline-offset: 4px;
+    margin: 25px;
+    font-size: 25px;
+    float: left;
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+    <title>Hackathon Creation Form For Surveys</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="alert alert-app-level">
+        </div>
+        <header class="header header-6">
+            <div class="branding">
+                <span class="title">Creation Form For Surveys</span>
+            </div>
+            <div class="header-nav">
+                <a href="#senden" class="nav-link nav-text">Send</a>
+            </div>
+            <div class="header-actions">
+                <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
+                    <clr-icon shape="cog"></clr-icon>
+                </a>
+            </div>
+        </header>
+        <nav class="subnav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#informationAboutTheHackathon">Information about the hackathon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#disclaimer">Disclaimer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#individualMeasures">Survey</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content-container">
+            <div class="content-area">
+                <form class="clr-form" action="<%= post_url%>" method = "POST">
+                <h2 id="informationAboutTheHackathon">Information about the hackathon</h2>
+                    <div class="clr-form-control">
+                        <label id="nameHackathon" for="example" class="clr-control-label">Name of Hackathon</label>
+                        <div class="clr-control-container">
+                            <div class="clr-input-wrapper">
+                                    <input type="text" id="example" placeholder="Awesome Hackathon" class="clr-input" name = "nameHackathon" required>
+                                    <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="surveyPurpose" for="select-full" class="clr-control-label">Survey purpose</label>
+                        <div class="clr-control-container">
+                            <div class="clr-select-wrapper">
+                              <select id="select-full" class="clr-select" name = "surveyPurpose">
+                                <option value="purpose1">Fun</option>
+                                <option value="purpose2">Sweat</option>
+                                <option value="purpose3">Creation of awesome projects</option>
+                              </select>
+                              <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                            <span class="clr-subtext">Select one option.</span>
+                        </div>
+                    </div> 
+                    <div class="clr-form-control">
+                        <label id="nameOrganizer" for="example" class="clr-control-label">Name of organizer</label>
+                        <div class="clr-control-container">
+                            <div class="clr-input-wrapper">
+                                    <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "nameOrganizer" required>
+                                    <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="roleOrganizer" for="select-full" class="clr-control-label">Role of organizer</label>
+                        <div class="clr-control-container">
+                            <div class="clr-select-wrapper">
+                              <select id="select-full" class="clr-select" name = "roleOrganizer">
+                                <option value="organizer">Organizer</option>
+                                <option value="option2">Option2</option>
+                                <option value="option3">Option3</option>
+                              </select>
+                              <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                            <span class="clr-subtext">Select one Role.</span>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="emailOrganizer" for="example" class="clr-control-label">Email of organizer</label>
+                        <div class="clr-control-container">
+                            <div class="clr-input-wrapper">
+                                    <input type="email" id="example" placeholder="max.mustermann@uni-due.de" class="clr-input" name = "emailOrganizer" required/>
+                                    <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="date" for="dateControl" class="clr-control-label">Date of Hackathon</label>
+                        <clr-date-container>
+                            <input id="dateControl" type="date" clrDate formControlName="date" name = "date" required/>
+                        </clr-date-container>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="urlEvent" for="example" class="clr-control-label">Url of event</label>
+                        <div class="clr-control-container">
+                            <div class="clr-input-wrapper">
+                                    <input type="url" id="example" placeholder="https://www.hackathon.de" class="clr-input" name = "urlEvent" required/>
+                                    <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="competitive" for="example" class="clr-control-label">Is the Hackathon competitive?</label>
+                        <div class="clr-control-container">
+                            <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio1" value = "competitive_true" class="clr-radio" name = "competitive" checked>
+                                <label for="vertical-radio1">Yes</label>
+                              </div>
+                              <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio2" value = "competitive_false" class="clr-radio" name = "competitive">
+                                <label for="vertical-radio2">No</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="mode" for="example" class="clr-control-label">Mode of Hackathon:</label>
+                        <div class="clr-control-container">
+                            <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio3"  value = "mode_virtual" class="clr-radio" name = "mode" checked>
+                                <label for="vertical-radio3">Virtual</label>
+                              </div>
+                              <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio4" value = "mode_in-person" class="clr-radio" name = "mode">
+                                <label for="vertical-radio4">In person</label>
+                              </div>
+                              <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio5" value = "mode_hybrid" class="clr-radio" name = "mode">
+                                <label for="vertical-radio5">Hybrid</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="size" for="example" class="clr-control-label">Size of Hackathon:</label>
+                        <div class="clr-control-container">
+                            <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio6" value = "size_s" class="clr-radio" name = "size" checked>
+                                <label for="vertical-radio6">S:1-50</label>
+                              </div>
+                              <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio7" value = "size_m" class="clr-radio" name = "size">
+                                <label for="vertical-radio7">M:51-150</label>
+                              </div>
+                              <div class="clr-radio-wrapper">
+                                <input type="radio" id="vertical-radio8" value = "size_l" class="clr-radio" name = "size">
+                                <label for="vertical-radio8">L:150+</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="type" for="example" class="clr-control-label">Type of Hackathon:</label>
+                        <div class="clr-control-container">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="left"><input type="checkbox" name="types[]" value="type_prototype"/>Prototype Focused</td>
+                                        <td class="left"><input type="checkbox" name="types[]" value="type_conceptual"/>Conceptual Solution Focused</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left"><input type="checkbox" name="types[]" value="type_analysis"/>Analysis Focused</td>
+                                        <td class="left"><input type="checkbox" name="types[]" value="type_education"/>Education Focused</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left"><input type="checkbox" name="types[]" value="type_community"/>Community Focused</td>
+                                        <td class="left"><input type="checkbox" name="types[]" value="type_ideation"/>Ideation Focused</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <h3 id="disclaimer">Disclaimer</h3>
+                    <div class="clr-form-control">
+                        <label for="example" class="clr-control-label">We [HACKATHON_ORGANIZERS] hereby confirm that the survey responses we 
+                            share are anonymized data. Anonymized data refers to information that does not identify an 
+                            individual and cannot reasonably be used to determine their identity. 
+                            Anonymization requires the removal of the data subject’s name, address, and 
+                            any other detail or combination of details that might support the identification of a data subject. 
+                            Anonymized data does not identify a person, so it is not considered personal data under GDPR. 
+                            Any identifying information provided in this form will only be used to provide information about this survey. 
+                            It will remain confidential to the team of researchers at the University of Tartu (Estonia) who provide this service, 
+                            and it will be deleted three months after the survey was created. If you have any further questions about this service, 
+                            please contact Alexander Nolte (alexander.nolte@ut.ee) at the University of Tartu.
+                        </label>
+                        <div class="clr-control-container">
+                            <div class="clr-radio-wrapper">
+                                <input onClick="enable()" type="radio" id="vertical-radio9" class="clr-radio" name = "disclaimerCheck" required>
+                                <label for="vertical-radio9">I agree</label>
+                              </div>
+                              <div class="clr-radio-wrapper">
+                                <input onClick="disable()" type="radio" id="vertical-radio10" class="clr-radio" name = "disclaimerCheck" checked>
+                                <label for="vertical-radio10">I do not agree</label>
+                              </div>
+                        </div>
+                    </div>
+                    <p>Please mark all extra survey items 
+                        which should be included in the hackathon survey. 
+                        Required Items can not be changed!</p>
+                <h2 id="individualMeasures">Individual measures</h2>
+                    <div class="clr-form-control">
+                        <label id="motivation" for="example" class="clr-control-label">1. Motivation(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="motivationOther" for="example" class="clr-control-label">2. MotivationOther(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="eventparticipation" for="example" class="clr-control-label">3. EventParticipation(required)</label>
+                    </div>
+                    <h2 id="teamComposition">Team composition</h2>
+                    <div class="clr-form-control">
+                        <label id="teamId" for="example" class="clr-control-label">4. TeamId(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="teamSize" for="example" class="clr-control-label">5. TeamSize(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="codeRepo" for="example" class="clr-control-label">6. CodeRepo(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="resourcesUrl" for="example" class="clr-control-label">7. ResourcesURL(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="teamLeader" for="example" class="clr-control-label">8. TeamLeader(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="teamManager" type="checkbox" name = "TeamManager" class="clr-checkbox">
+                                <label for="teamManager">9. TeamManager</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="socialLeader" type="checkbox" name = "SocialLeader" class="clr-checkbox">
+                                <label for="socialLeader">10. SocialLeader</label>
+                            </div>
+                        </div>
+                    </div>
+                <h2 id="teamProcess">Team process</h2>
+                    <div class="clr-form-control">
+                        <label id="satisfactionWithProcess" for="example" class="clr-control-label">11. SatisfactionWithProcess(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="goalClarity" for="example" class="clr-control-label">12. GoalClarity(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="voice" for="example" class="clr-control-label">13. Voice(required)</label>
+                    </div>
+                <h2 id="projectMeasures">Project measures</h2>
+                    <div class="clr-form-control">
+                        <label id="satisfactionWithOutcome" for="example" class="clr-control-label">14. SatisfactionWithOutcome(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="perceivedUsefulness" type="checkbox" name = "PerceivedUsefulness" class="clr-checkbox">
+                                <label for="perceivedUsefulness">15. PerceivedUsefulness</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="continuationIntentions" type="checkbox" name = "ContinuationIntentions" class="clr-checkbox">
+                                <label for="continuationIntentions">16. ContinuationIntentions</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="behavioralControl" type="checkbox" name = "BehavioralControl" class="clr-checkbox">
+                                <label for="behavioralControl">17. BehavioralControl</label>
+                            </div>
+                        </div>
+                    </div>
+                <h2 id="mentoring">Mentoring</h2>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="mentoringExperience" type="checkbox" name = "MentoringExperience" class="clr-checkbox">
+                                <label for="mentoringExperience">18. MentoringExperience</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="mentoringOther" type="checkbox" name = "MentoringOther" class="clr-checkbox">
+                                <label for="mentoringOther">19. MentoringOther</label>
+                            </div>
+                        </div>
+                    </div>
+                <h2 id="communityMeasures">Community measures</h2>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="communityIdentification" type="checkbox" name = "CommunityIdentification" class="clr-checkbox">
+                                <label for="communityIdentification">20. CommunityIdentification</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="socialCapital" type="checkbox" name = "SocialCapital" class="clr-checkbox">
+                                <label for="socialCapital">21. SocialCapital</label>
+                            </div>
+                        </div>
+                    </div>
+                <h2 id="eventMeasures">Event measures</h2>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="satisfactionWithHackathon" type="checkbox" name = "SatisfactionWithHackathon" class="clr-checkbox">
+                                <label for="satisfactionWithHackathon">22. SatisfactionWithHackathon</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="futureParticipationIntentions"  type="checkbox" name = "FutureParticipationIntentions" class="clr-checkbox">
+                                <label for="futureParticipationIntentions">23. FutureParticipationIntentions</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="recommendationLikelyness"  type="checkbox" name = "RecommendationLikelyness" class="clr-checkbox">
+                                <label for="recommendationLikelyness">24. RecommendationLikelyness</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="sessionSatisfaction" type="checkbox" name = "SessionSatisfaction" class="clr-checkbox">
+                                <label for="sessionSatisfaction">25. SessionSatisfaction</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="sessionUsefulness" type="checkbox" name = "SessionUsefulness" class="clr-checkbox">
+                                <label for="sessionUsefulness">26. SessionUsefulness</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="sessionEnjoyment" type="checkbox" name = "SessionEnjoyment" class="clr-checkbox">
+                                <label for="sessionEnjoyment">27. SessionEnjoyment</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="goodEvent" type="checkbox" name = "GoodEvent" class="clr-checkbox">
+                                <label for="goodEvent">28. GoodEvent</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="improveEvent" type="checkbox" name = "ImproveEvent" class="clr-checkbox">
+                                <label for="improveEvent">29. ImproveEvent</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="openSharing" type="checkbox" name = "OpenSharing"  class="clr-checkbox">
+                                <label for="openSharing">30. OpenSharing</label>
+                            </div>
+                        </div>
+                    </div>
+                <h2 id="individualProgrammingExperience">Individual programming experience</h2>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="programmingExperienceYears" type="checkbox" name = "ProgrammingExperienceYears" class="clr-checkbox">
+                                <label for="programmingExperienceYears">31. ProgrammingExperienceYears</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="programmingExperienceComparison" type="checkbox" name = "ProgrammingExperienceComparison" class="clr-checkbox">
+                                <label for="programmingExperienceComparison">32. ProgrammingExperienceComparison</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="programmingAbility" type="checkbox" name = "ProgrammingAbility" class="clr-checkbox">
+                                <label for="programmingAbility">33. ProgrammingAbility</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="programmingComfort" type="checkbox" name = "ProgrammingComfort" class="clr-checkbox">
+                                <label for="programmingComfort">34. ProgrammingComfort</label>
+                            </div>
+                        </div>
+                    </div>
+                <h2 id="demographicsAndIndividualBackground">Demographics and individual background</h2>
+                    <div class="clr-form-control">
+                        <label id="age" for="example" class="clr-control-label">35. Age(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="gender" for="example" class="clr-control-label">36. Gender(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <div class="clr-control-container">
+                            <div class="clr-checkbox-wrapper">
+                                <input id="education" type="checkbox" name = "Education" class="clr-checkbox">
+                                <label for="education">37. Education</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                        <label id="minority" for="example" class="clr-control-label">38. Minority(required)</label>
+                    </div>
+                    <div class="clr-form-control">
+                        <label  for="example" class="clr-control-label"></label>
+                    </div>
+                    <p>"Agree to the terms of use to create Form!"</p>
+                <button id="senden" type = "submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+            <nav class="sidenav">
+                <section class="sidenav-content">
+                    <section class="nav-group collapsible">
+                        <input id="tabexample1" type="checkbox">
+                        <label for="tabexample1">Information about the hackathon</label>
+                        <ul class="nav-list">
+                            <li><a href="#nameHackathon" class="nav-link">Name of Hackathon</a></li>
+                            <li><a href="#surveyPurpose"class="nav-link">Survey purpose</a></li>
+                            <li><a href="#roleOrganizer"class="nav-link">Name of organizer</a></li>
+                            <li><a href="#nameOrganizer"class="nav-link">Role of organizer</a></li>
+                            <li><a href="#emailOrganizer"class="nav-link">Email of organizer</a></li>
+                            <li><a href="#date"class="nav-link">Date of Hackathon</a></li>
+                            <li><a href="#urlEvent"class="nav-link">Url of event</a></li>
+                            <li><a href="#competitive" class="nav-link">Is the Hackathon competitive?</a></li>
+                            <li><a href="#mode"class="nav-link">Mode of Hackathon</a></li>
+                            <li><a href="#size"class="nav-link">Size of Hackathon</a></li>
+                            <li><a href="#date"class="nav-link">Type of Hackathon</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample2" type="checkbox">
+                        <label for="tabexample2">Disclaimer</label>
+                        <ul class="nav-list">
+                            <li><a href="#disclaimer" class="nav-link">Agreement</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample3" type="checkbox">
+                        <label for="tabexample3">Individual measures</label>
+                        <ul class="nav-list">
+                            <li><a href="#motivation" class="nav-link">1. Motivation(required)</a>
+                            <li><a href="#motivationOther"class="nav-link">2. MotivationOther(required)</a></li>
+                            <li><a href="#eventparticipation"class="nav-link">3. EventParticipation(required)</a></li>
+                            <li><a href="#teamId"class="nav-link">4. TeamId(required)</a></li>
+                            <li><a href="#teamSize"class="nav-link">5. TeamSize(required)</a></li>
+                            <li><a href="#codeRepo"class="nav-link">6. CodeRepo(required)</a></li>
+                            <li><a href="#resourcesUrl"class="nav-link">7. ResourcesURL(required)</a></li>
+                            <li><a href="#teamLeader" class="nav-link">8. TeamLeader(required)</a></li>
+                            <li><a href="#teamManager"class="nav-link">9. TeamManager</a></li>
+                            <li><a href="#socialLeader"class="nav-link">10. SocialLeader</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample4" type="checkbox">
+                        <label for="tabexample4">Team process</label>
+                        <ul class="nav-list">
+                            <li><a href="#satisfactionWithProcess" class="nav-link">11. SatisfactionWithProcess(required)</a>
+                            <li><a href="#goalClarity" class="nav-link">12. GoalClarity(required)</a></li>
+                            <li><a href="#voice" class="nav-link">13. Voice(required)</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample5" type="checkbox">
+                        <label for="tabexample5">Project measures</label>
+                        <ul class="nav-list">
+                            <li><a href="#satisfactionWithOutcome" class="nav-link">14. SatisfactionWithOutcome(required)</a>
+                            <li><a href="#perceivedUsefulness"class="nav-link">15. PerceivedUsefulness</a></li>
+                            <li><a href="#continuationIntentions"class="nav-link">16. ContinuationIntentions</a></li>
+                            <li><a href="#behavioralControl"class="nav-link">17. BehavioralControl</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample6" type="checkbox">
+                        <label for="tabexample6">Mentoring</label>
+                        <ul class="nav-list">
+                            <li><a href="#mentoringExperience" class="nav-link">18. MentoringExperience</a>
+                            <li><a href="#mentoringOther"class="nav-link">19. MentoringOther</a></li>
+
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample7" type="checkbox">
+                        <label for="tabexample7">Community measures</label>
+                        <ul class="nav-list">
+                            <li><a href="#communityIdentification" class="nav-link">20. CommunityIdentification</a>
+                            <li><a href="#socialCapital"class="nav-link">21. SocialCapital</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample8" type="checkbox">
+                        <label for="tabexample8">Event measures</label>
+                        <ul class="nav-list">
+                            <li><a href="#satisfactionWithHackathon" class="nav-link">22. SatisfactionWithHackathon</a>
+                            <li><a href="#futureParticipationIntentions"class="nav-link">23. FutureParticipationIntentions</a></li>
+                            <li><a href="#recommendationLikelyness"class="nav-link">24. RecommendationLikelyness</a></li>
+                            <li><a href="#sessionSatisfaction"class="nav-link">25. SessionSatisfaction</a></li>
+                            <li><a href="#sessionUsefulness"class="nav-link">26. SessionUsefulness</a></li>
+                            <li><a href="#sessionEnjoyment"class="nav-link">27. SessionEnjoyment</a></li>
+                            <li><a href="#goodEvent"class="nav-link">28. GoodEvent</a></li>
+                            <li><a href="#improveEvent" class="nav-link">29. ImproveEvent</a></li>
+                            <li><a href="#openSharing"class="nav-link">30. OpenSharing</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample9" type="checkbox">
+                        <label for="tabexample9">Individual programming experience</label>
+                        <ul class="nav-list">
+                            <li><a href="#programmingExperienceYears" class="nav-link">31. ProgrammingExperienceYears</a>
+                            <li><a href="#programmingExperienceComparison"class="nav-link">32. ProgrammingExperienceComparison</a></li>
+                            <li><a href="#programmingAbility"class="nav-link">33. ProgrammingAbility</a></li>
+                            <li><a href="#programmingComfort"class="nav-link">34. ProgrammingComfort</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample10" type="checkbox">
+                        <label for="tabexample10">Demographics and individual background</label>
+                        <ul class="nav-list">
+                            <li><a href="#age" class="nav-link">35. Age(required)</a>
+                            <li><a href="#gender"class="nav-link">36. Gender(required)</a></li>
+                            <li><a href="#education"class="nav-link">37. Education</a></li>
+                            <li><a href="#minority"class="nav-link">38. Minority(required)</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </nav>
+        </div>
+    </div>
+    <script>
+        document.querySelector('#senden').disabled = true;
+        function disable() {
+            document.querySelector('#senden').disabled = true;
+        }
+        function enable() {
+            document.querySelector('#senden').disabled = false;
+        }
+    </script>
+</body>
+</html>
+
