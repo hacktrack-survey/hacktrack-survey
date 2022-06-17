@@ -75,25 +75,28 @@ Example: `/api/form/a083950c-2424-41f1-bdb0-92e3126c45c2/responses`
 {
   "responses": [
     {
-      "formId": string,
-      "responseId": string,
-      "createTime": string,
-      "lastSubmittedTime": string,
-      "respondentEmail": string,
+      "responseId":"ACYDBNjQbCzzagBwe7tmO-zDsPEP3XIgbK8_ebpORH43W1AOEqhZHg9NcHOTXv8KbzSjdTQ",
+      "createTime": "2022-06-17T16:39:19.545Z",
+      "lastSubmittedTime": "2022-06-17T16:39:19.545295Z",
       "answers": {
-        string: {
+        "00000124": {
+          "questionId": "00000124",
+          "textAnswers": {
+            "answers": [
+              {
+                "value": "..."
+              }
+            ]
+          }
+        },
+        "00000123": {
           ...
         },
         ...
-      },
-      "totalScore": number
+      }
     },
-    {
-      "formId": string,
-      ...
-    }
-  ],
-  "nextPageToken": string
+    ...
+  ]
 }
 ```
 See [Goolge Forms API Documentation for further information](https://developers.google.com/forms/api/reference/rest/v1/forms.responses/list)
