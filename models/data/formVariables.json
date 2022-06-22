@@ -1,14 +1,17 @@
 {
   "nameHackathon": [],
-  "nameOrganizer": [],
+  "organizer": [],
+  "contact": [],
   "emailOrganizer": [],
-  "roleOrganizer": [],
   "date": [],
   "urlEvent": [],
+  "roleOrganizer": [],
+  "theme": [],
+  "surveyPurpose": [],
   "competitive": ["competitive_true", "competitive_false"],
   "mode": ["mode_virtual", "mode_in-person", "mode_hybrid"],
   "size": ["size_s", "size_m", "size_l"],
-  "types[]": [
+  "type": [
     "type_prototype",
     "type_conceptual",
     "type_analysis",
@@ -16,7 +19,6 @@
     "type_community",
     "type_ideation"
   ],
-  "surveyPurpose": [],
   "disclaimerCheck": [],
   "TeamManager": ["on"],
   "SocialLeader": ["on"],

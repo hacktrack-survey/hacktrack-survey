@@ -31,7 +31,7 @@ function buildAndSendSurvey(req, res) {
     .createSurveyForm(surveyFormJSON, surveyUpdateJSON)
     .then((responseData) => {
       const dbEntry = dbController.saveSurvey(
-        Object.assign({ formId: responseData.formId }, metaData)
+        Object.assign(responseData.formId, metaData)
       );
       emailController.sendFormCreationMail(
         metaData,

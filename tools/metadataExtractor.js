@@ -1,16 +1,17 @@
 function extractMetadata(body) {
   return {
-    name: body.nameHackathon,
-    date: body.date,
-    event_url: body.urlEvent,
-    competitive: evalCompetitive(body.competitive),
-    mode: body.mode,
-    size: body.size,
-    type: body.type,
-    organizer: body.nameOrganizer,
-    email: body.emailOrganizer,
-    roleOrganizer: body.roleOrganizer,
-    surveyPurpose: body.surveyPurpose,
+    name           : body.nameHackathon,
+    organizer      : body.organizer,
+    contact        : body.organizer,
+    email          : body.emailOrganizer,
+    surveyPurpose  : body.surveyPurpose,
+    theme          : "n/a",
+    date           : body.date,
+    event_url      : body.urlEvent,
+    competitive    : evalCompetitive(body.competitive),
+    mode           : body.mode,
+    size           : body.size,
+    type           : body.type,
     disclaimerCheck: body.disclaimerCheck,
   };
 }

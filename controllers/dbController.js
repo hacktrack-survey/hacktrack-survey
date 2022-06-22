@@ -11,22 +11,11 @@ fileChecker.createFileIfNotExists(
 
 const surveyDB = require("../models/data/surveyDb.json");
 
-function saveSurvey(formData) {
+function saveSurvey(formId, metadata) {
   const entry = {
-    formId: formData.formId,
+    formId: formId,
     uuid: crypto.randomUUID(),
-    "meta-data": {
-      name: formData.name,
-      date: formData.date,
-      event_url: formData.event_url,
-      competitive: formData.competitive,
-      mode: formData.mode,
-      size: formData.size,
-      type: formData.type,
-      roleOrganizer: formData.roleOrganizer,
-      surveyPurpose: formData.surveyPurpose,
-      disclaimerCheck: formData.disclaimerCheck,
-    },
+    "meta-data": metadata,
   };
 
   addEntry(entry);
