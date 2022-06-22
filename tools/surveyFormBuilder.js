@@ -1,5 +1,6 @@
-const structure = require('../models/data/surveyFormStructure.json');
-const elements  = require('../models/forms/surveyUpdateForm.json');
+const structure              = require('../models/data/surveyFormStructure.json');
+const elements               = require('../models/forms/surveyUpdateForm.json');
+const placeholderReplacement = require('./placeholderReplacement');
 
 function build(formBody) {
     let survey = {
@@ -8,7 +9,7 @@ function build(formBody) {
           {
             "updateFormInfo": {
               "info": {
-                "description": "As an attendee of the [HACKATHON_NAME] hackathon you are invited to complete the following survey. This hackathon is organized by [HACKATHON_ORGANIZERS]. The main purpose of this survey is [SURVEY_PURPOSE]. The questions are mostly multiple choice / agree-disagree and will take approximately 10 minutes to answer. The risks that are associated with this survey are no greater than those ordinarily encountered in daily life. Your decision regarding whether or not to participate in this study will not result in any loss of benefits to which you are otherwise entitled. Your participation in this survey is voluntary and you may discontinue participation at any time. Your responses will be de-identified and will remain confidential to the study team. Anonymized responses to this survey might also be shared with a group of researchers at the University of Tartu.  If you have any further questions about the survey, please contact [ROLE] [HACKATHON_ORGANIZER_NAME] ([HACKATHON_ORGANIZER_EMAIL])."
+                "description": "As an attendee of the [HACKATHON_NAME] hackathon you are invited to complete the following survey. This hackathon is organized by [HACKATHON_ORGANIZERS]. The main purpose of this survey is [SURVEY_PURPOSE]. The questions are mostly multiple choice / agree-disagree and will take approximately 10 minutes to answer. The risks that are associated with this survey are no greater than those ordinarily encountered in daily life. Your decision regarding whether or not to participate in this study will not result in any loss of benefits to which you are otherwise entitled. Your participation in this survey is voluntary and you may discontinue participation at any time. Your responses will be de-identified and will remain confidential to the study team. Anonymized responses to this survey might also be shared with a group of researchers at the University of Tartu.  If you have any further questions about the survey, please contact [HACKATHON_ORGANIZER_NAME] ([HACKATHON_ORGANIZER_EMAIL])."
               },
               "updateMask": "description"
             }
@@ -31,7 +32,7 @@ function build(formBody) {
 
     survey = addSections(survey, formBody);
     survey = editIndeces(survey);
-    survey = replacePlaceholders(survey, formBody);
+    survey = placeholderReplacement.replacePlaceholders(survey, formBody);
 
     return survey;
 }
@@ -121,62 +122,6 @@ function editIndeces(survey) {
     });
 
     return survey;
-}
-
-function replacePlaceholders(survey, formBody) {
-    const placeholders =
-    [{
-            hackathon_name: {
-                placeholder: "\\[HACKATHON_NAME\\]",
-                replaceWith: "'" + formBody.nameHackathon + "'"
-            }
-        },
-        {
-            hackathon_theme: {
-                placeholder: "\\[HACKATHON_THEME\\]",
-                replaceWith: "[HACKATHON_THEME]",
-            }
-        },
-        {
-            organizer : {
-                placeholder: "\\[HACKATHON_ORGANIZERS\\]",
-                replaceWith: "[HACKATHON_ORGANIZERS]"
-            }
-        },
-        {
-            organizer_name: {
-                placeholder: "\\[HACKATHON_ORGANIZER_NAME\\]",
-                replaceWith: formBody.nameOrganizer
-            }
-        },
-        {
-            organizer_mail: {
-                placeholder: "\\[HACKATHON_ORGANIZER_EMAIL\\]",
-                replaceWith: formBody.emailOrganizer
-            }
-        },
-        {
-            role: {
-                placeholder: "\\[ROLE\\]",
-                replaceWith: "[ROLE]"
-            }
-        },
-        {
-            purpose: {
-                placeholder: "\\[SURVEY_PURPOSE\\]",
-                replaceWith: "[SURVEY_PURPOSE]"
-            }
-        }
-    ];
-
-    let jsonString = JSON.stringify(survey);
-
-    placeholders.forEach(ph => {
-        let regex = new RegExp(ph[Object.keys(ph)[0]].placeholder);
-        jsonString = jsonString.replace(regex, ph[Object.keys(ph)[0]].replaceWith);
-    });
-    
-    return JSON.parse(jsonString);
 }
 
 module.exports = {build};
