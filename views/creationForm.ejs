@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+.snap
+{
+   position: absolute;
+   top: 8%;
+   width: 80%;
+   
+}
+</style>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+    <link href="/node_modules/modern-normalize/modern-normalize.css" rel="stylesheet" />
+    <link href="/node_modules/@cds/core/global.min.css" rel="stylesheet" />
+    <link href="/node_modules/@cds/core/styles/theme.dark.min.css" rel="stylesheet">
+    <link href="/node_modules/@cds/city/css/bundles/default.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@clr/ui/clr-ui.min.css" rel="stylesheet"/>
+    <link href="/node_modules/@cds/core/styles/shim.clr-ui.min.css" rel="stylesheet" />
     <title>Hackathon Creation Form For Surveys</title>
 </head>
-<body>
+<body cds-text="body" cds-theme="">
     <div class="main-container">
         <div class="alert alert-app-level">
         </div>
@@ -34,10 +48,18 @@
                     <a class="nav-link" href="#individualMeasures">Survey</a>
                 </li>
             </ul>
-        </nav>
+        </nav> 
         <div class="content-container">
-            <div class="content-area">
+        <div class="content-area">
                 <form class="clr-form" action="<%= post_url%>" method = "POST">
+                    <div class="snap">
+                        <h4>Progress</h4>
+                        <div class="progress labeled" id="myBar">
+                            <progress max="100" value="0" data-displayval="0%"></progress>
+                            <span></span>
+                        </div>
+                        <button onclick="move()">Click Me</button>
+                    </div>
                     <h3 id="disclaimer">Disclaimer</h3>
                     <div class="clr-form-control">
                         <label for="example" class="clr-control-label"> Please take note that you will need some time to fill out this survey. 
@@ -86,38 +108,39 @@
                                         <div class="clr-form-control">
                                             <label id="surveyPurpose" for="select-full" class="clr-control-label">Survey purpose</label>
                                             <div class="clr-control-container">
-                                                <div class="clr-select-wrapper">
-                                                  <select id="select-full" class="clr-select" name = "surveyPurpose">
-                                                    <option value="purpose1">Fun</option>
-                                                    <option value="purpose2">Sweat</option>
-                                                    <option value="purpose3">Creation of awesome projects</option>
-                                                  </select>
-                                                  <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                                                <div class="clr-input-wrapper">
+                                                    <input type="text" id="example" placeholder="Survey Purpose" class="clr-input" name = "surveyPurpose" required>
+                                                    <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
                                                 </div>
                                                 <span class="clr-subtext">Select one option.</span>
                                             </div>
                                         </div> 
-                                        <div class="clr-form-control">
-                                            <label id="organizers_label" for="example" class="clr-control-label">Name of organizer</label>
+                                        <div class="clr-form-control" id="newOrganier">
+                                            <label id="nameOrganizer" for="example" class="clr-control-label">Name of organizer</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "organizer" required>
+                                                        <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "nameOrganizer" required>
+                                                        <button onclick="addOrganizer(event)" class="btn btn-primary">Add more Organizer</button>
                                                         <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="clr-form-control">
-                                            <label id="roleOrganizer" for="select-full" class="clr-control-label">Role of organizer</label>
+                                            <label id="roleOrganizer" for="select-full" class="clr-control-label">Contact person</label>
                                             <div class="clr-control-container">
-                                                <div class="clr-select-wrapper">
-                                                  <select id="select-full" class="clr-select" name = "roleOrganizer">
-                                                    <option value="organizer">Organizer</option>
-                                                    <option value="option2">Option2</option>
-                                                    <option value="option3">Option3</option>
-                                                  </select>
+                                                <div class="clr-input-wrapper">
+                                                    <input type="text" id="example" placeholder="Anna Bauer" class="clr-input" name = "contactPerson" required>
                                                   <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
                                                 </div>
-                                                <span class="clr-subtext">Select one Role.</span>
+                                            </div>
+                                        </div>
+                                        <div class="clr-form-control">
+                                            <label id="roleOrganizer" for="select-full" class="clr-control-label">Hackathon theme</label>
+                                            <div class="clr-control-container">
+                                                <div class="clr-input-wrapper">
+                                                    <input type="text" id="example" placeholder="What the Hack!" class="clr-input" name = "hackathonTheme" required>
+                                                  <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="clr-form-control">
@@ -197,16 +220,16 @@
                                                 <table class="table">
                                                     <tbody>
                                                         <tr>
-                                                            <td class="left"><input type="checkbox" name="type" value="type_prototype"/>Prototype Focused</td>
-                                                            <td class="left"><input type="checkbox" name="type" value="type_conceptual"/>Conceptual Solution Focused</td>
+                                                            <td class="left"><input type="checkbox" name="types[]" value="type_prototype"/>Prototype Focused</td>
+                                                            <td class="left"><input type="checkbox" name="types[]" value="type_conceptual"/>Conceptual Solution Focused</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="left"><input type="checkbox" name="type" value="type_analysis"/>Analysis Focused</td>
-                                                            <td class="left"><input type="checkbox" name="type" value="type_education"/>Education Focused</td>
+                                                            <td class="left"><input type="checkbox" name="types[]" value="type_analysis"/>Analysis Focused</td>
+                                                            <td class="left"><input type="checkbox" name="types[]" value="type_education"/>Education Focused</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="left"><input type="checkbox" name="type" value="type_community"/>Community Focused</td>
-                                                            <td class="left"><input type="checkbox" name="type" value="type_ideation"/>Ideation Focused</td>
+                                                            <td class="left"><input type="checkbox" name="types[]" value="type_community"/>Community Focused</td>
+                                                            <td class="left"><input type="checkbox" name="types[]" value="type_ideation"/>Ideation Focused</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -758,10 +781,44 @@
             </nav>
         </div>
     </div>
+</body>
     <script>
+        // switch to dark mode by os of user  
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        body.setAttribute('cds-theme', 'dark');
+            body.setAttribute('cds-theme', 'dark');
+            console.log('Currently in dark mode');
         }
+
+        // progress bar
+        var i = 0;
+        function move() {
+            if (i == 0) {
+                i = 1;
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                    }
+                }
+            }      
+        }      
+        
+        //  add more Organizer
+        function addOrganizer(event) {
+          var input = document.createElement("input");
+          input.setAttribute("type", "text");
+          input.className = "clr-input";
+          input.Name = "nameOrganizer";
+          document.getElementById("newOrganier").appendChild(input);
+        }
+
+        // look if disclaimer is checked
         document.querySelector('#senden').disabled = true;
         function disable() {
             document.querySelector('#senden').disabled = true;
@@ -770,6 +827,5 @@
             document.querySelector('#senden').disabled = false;
         }
     </script>
-</body>
 </html>
 
