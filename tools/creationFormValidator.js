@@ -34,7 +34,7 @@ function isValidValue(key, value) {
     const validValues = variables[key];
     let validValue;
     
-    if (key === "types[]") {
+    if (key === "type") {
         return areValidTypes(key, value, validValues);
     }
 
