@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-.snap
-{
-   position: absolute;
-   top: 8%;
-   width: 80%;
-}
-</style>
 <head>
     <meta charset="UTF-8">
     <link href="https://unpkg.com/modern-normalize/modern-normalize.css" rel="stylesheet" />
@@ -1104,27 +1096,7 @@
             document.body.setAttribute('cds-theme', 'dark');
             console.log('Currently in dark mode');
         }
-
-        // progress bar
-        var i = 0;
-        function move() {
-            if (i == 0) {
-                i = 1;
-                var elem = document.getElementById("myBar");
-                var width = 1;
-                var id = setInterval(frame, 10);
-                function frame() {
-                    if (width >= 100) {
-                    clearInterval(id);
-                    i = 0;
-                } else {
-                    width++;
-                    elem.style.width = width + "%";
-                    }
-                }
-            }      
-        }      
-        
+              
         //  add more Organizer
         function addOrganizer(event) {
           var input = document.createElement("input");
