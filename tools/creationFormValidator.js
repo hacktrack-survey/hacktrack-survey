@@ -7,6 +7,12 @@ function validate(body) {
     for (let index in Object.keys(body)) {
         key = keys[index];
         value = body[key];
+
+
+        const organizerPattern = new RegExp("organizer\\[\\d+\\]");
+        if (organizerPattern.test(key)) {
+            return true;
+        }
         
         if (!isValidName(key)) {
             console.log(`${key} not a valid key!`);

@@ -1,11 +1,11 @@
 function extractMetadata(body) {
   return {
     name           : body.nameHackathon,
-    organizer      : body.organizer,
-    contact        : body.organizer,
+    organizer      : getOrganizers(body),
+    contact        : body.contactPerson,
     email          : body.emailOrganizer,
     surveyPurpose  : body.surveyPurpose,
-    theme          : "n/a",
+    theme          : body.hackathonTheme,
     date           : body.date,
     event_url      : body.urlEvent,
     competitive    : evalCompetitive(body.competitive),
@@ -14,6 +14,21 @@ function extractMetadata(body) {
     type           : body.type,
     disclaimerCheck: body.disclaimerCheck,
   };
+}
+
+function getOrganizers(body) {
+  let i = 0;
+  const organizers = [];
+
+  for (let [key, value] of Object.entries(body)) {
+    if (key.includes("organizer")) {
+      if (value.replace(new RegExp("\\s"), '').length !== 0) {
+        organizers.push(value);
+      }
+    }
+  }
+
+  return organizers;
 }
 
 function evalCompetitive(value) {
