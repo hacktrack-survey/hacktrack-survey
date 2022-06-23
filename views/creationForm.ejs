@@ -6,17 +6,16 @@
    position: absolute;
    top: 8%;
    width: 80%;
-   
 }
 </style>
 <head>
     <meta charset="UTF-8">
-    <link href="/node_modules/modern-normalize/modern-normalize.css" rel="stylesheet" />
-    <link href="/node_modules/@cds/core/global.min.css" rel="stylesheet" />
-    <link href="/node_modules/@cds/core/styles/theme.dark.min.css" rel="stylesheet">
-    <link href="/node_modules/@cds/city/css/bundles/default.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/modern-normalize/modern-normalize.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@cds/core/global.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@cds/core/styles/theme.dark.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@cds/city/css/bundles/default.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/@clr/ui/clr-ui.min.css" rel="stylesheet"/>
-    <link href="/node_modules/@cds/core/styles/shim.clr-ui.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@cds/core/styles/shim.clr-ui.min.css" rel="stylesheet" />
     <title>Hackathon Creation Form For Surveys</title>
 </head>
 <body cds-text="body" cds-theme="">
@@ -1102,7 +1101,7 @@
     <script>
         // switch to dark mode by os of user  
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            body.setAttribute('cds-theme', 'dark');
+            document.body.setAttribute('cds-theme', 'dark');
             console.log('Currently in dark mode');
         }
 
