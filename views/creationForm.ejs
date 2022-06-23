@@ -101,12 +101,13 @@
                                                 <span class="clr-subtext">Select one option.</span>
                                             </div>
                                         </div> 
-                                        <div class="clr-form-control" id="newOrganier">
+                                        <div class="clr-form-control" id="newOrganizer">
                                             <label id="organizers_label" for="example" class="clr-control-label">Name of organizer</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "organizer" required>
-                                                        <button onclick="addOrganizer(event)" class="btn btn-primary">Add more Organizer</button>
+                                                        <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "organizer[0]" required>
+                                                        <button type="button" onclick="remOrganizer(event)" class="btn btn-primary">-</button>
+                                                        <button type="button" onclick="addOrganizer(event)" class="btn btn-primary">+</button>
                                                         <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
                                                 </div>
                                             </div>
@@ -1091,19 +1092,34 @@
     </div>
 </body>
     <script>
+        let organizerCounter = 1;
+
         // switch to dark mode by os of user  
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.setAttribute('cds-theme', 'dark');
             console.log('Currently in dark mode');
         }
               
-        //  add more Organizer
+        // add one Organizer
         function addOrganizer(event) {
           var input = document.createElement("input");
+          input.placeholder="Max Mustermann";
           input.setAttribute("type", "text");
           input.className = "clr-input";
-          input.Name = "nameOrganizer";
-          document.getElementById("newOrganier").appendChild(input);
+          input.name = `organizer[${organizerCounter}]`;
+          document.getElementById("newOrganizer").appendChild(input);
+
+          organizerCounter++;
+        }
+
+        // remove one Organizer
+        function remOrganizer(event) {
+            if (organizerCounter > 1) {
+                const res = document.getElementsByName(`organizer[${organizerCounter-1}]`);
+                res[0].parentNode.removeChild(res[0]);
+                organizerCounter--;
+            }
+          
         }
 
         // look if disclaimer is checked
