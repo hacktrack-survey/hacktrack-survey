@@ -99,13 +99,13 @@
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
                                                         <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "organizer[0]" required>
-                                                        <button type="button" onclick="remOrganizer(event)" class="btn btn-primary">-</button>
-                                                        <button type="button" onclick="addOrganizer(event)" class="btn btn-primary">+</button>
+                                                        <button type="button" onclick="remOrganizer(event)" class="btn btn-primary btn-sm">-</button>
+                                                        <button type="button" onclick="addOrganizer(event)" class="btn btn-primary btn-sm">+</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="clr-form-control">
-                                            <label id="roleOrganizer" for="select-full" class="clr-control-label">Contact person</label>
+                                            <label id="contactPerson" for="select-full" class="clr-control-label">Contact person</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
                                                     <input type="text" id="example" placeholder="Anna Bauer" class="clr-input" name = "contactPerson" required>
@@ -113,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="clr-form-control">
-                                            <label id="roleOrganizer" for="select-full" class="clr-control-label">Hackathon theme</label>
+                                            <label id="hackathonTheme" for="select-full" class="clr-control-label">Hackathon theme</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
                                                     <input type="text" id="example" placeholder="What the Hack!" class="clr-input" name = "hackathonTheme" required>
@@ -229,35 +229,42 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <label id="motivation" for="example" class="clr-control-label">1. Motivation(required)</label>
-                                                <div><p>Why did people participate in the hackathon? (Not at all, To some extent, To a moderate
-                                                    extent, To a large extent, Completely)</p>
-                                                    <p>• Having fun</p>
-                                                    <p>• Making something cool / Working on an interesting project idea</p>
-                                                    <p>• Learning new tools or skills (Clary, understanding)</p>
-                                                    <p>• [HACKATHON_THEME]</p>
-                                                    <p>• Meeting new people</p>
-                                                    <p>• Seeing what others are working on</p>
-                                                    <p>• Sharing my experience and expertise</p>
-                                                    <p>• Joining friends that participate (Clary, social)</p>
-                                                    <p>• Dedicated time to get work done</p>
-                                                    <p>• Wind a prize</p>
-                                                    <p></p>
-                                                    <a href="#references">based on Filippova et al. (2017) [6], Nolte et al. (2018) [10]</a>
-                                                </div>
+                                                <h3 id="motivation" for="example" class="clr-control-label">1. Motivation(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Why did people participate in the hackathon? (Not at all, To some extent, To a moderate
+                                                        extent, To a large extent, Completely)</li>
+                                                    <li>
+                                                    <ul class="list">
+                                                        <li>Having fun</li>
+                                                        <li>Making something cool / Working on an interesting project idea</li>
+                                                        <li>Learning new tools or skills (Clary, understanding)</li>
+                                                        <li>[HACKATHON_THEME]</li>
+                                                        <li>Meeting new people</li>
+                                                        <li>Seeing what others are working on</li>
+                                                        <li>Sharing my experience and expertise</li>
+                                                        <li>Joining friends that participate (Clary, social)</li>
+                                                        <li>Dedicated time to get work done</li>
+                                                        <li>Win a prize</li>
+                                                    </ul>
+                                                    </li>
+                                                    <li><a href="#references">based on Filippova et al. (2017) [6], Nolte et al. (2018) [10]</a></li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="motivationOther" for="example" class="clr-control-label">2. MotivationOther(required)</label>
-                                                <div>
-                                                    <p>If your participation is motivated by other than the above reasons, please describe
-                                                        additional motivations below. (text entry)</p>
-                                                </div>
+                                                <h3 id="motivationOther" for="example" class="clr-control-label">2. Motivation Other(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>If your participation is motivated by other than the above reasons, please describe
+                                                        additional motivations below. (text entry)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="eventparticipation" for="example" class="clr-control-label">3. EventParticipation(required)</label>
-                                                <div>
-                                                    <p>In how many similar events have you participated in the past? (number entry)</p>
-                                                </div>
+                                                <h3 id="eventparticipation" for="example" class="clr-control-label">3. Event Participation(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>In how many similar events have you participated in the past? (number entry)</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -275,53 +282,67 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <label id="teamId" for="example" class="clr-control-label">4. TeamId(required)</label>
-                                                <div>
-                                                    <p>What was the name of your team / project? (text entry)</p>
-                                                </div>
+                                                <h3 id="teamId" for="example" class="clr-control-label">4. Team Id(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>What was the name of your team / project? (text entry)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="teamSize" for="example" class="clr-control-label">5. TeamSize(required)</label>
-                                                <div>
-                                                    <p>How many people were in your team (including yourself)? (number entry)</p>
-                                                </div>
+                                                <h3 id="teamSize" for="example" class="clr-control-label">5. Team Size(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>How many people were in your team (including yourself)? (number entry)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="codeRepo" for="example" class="clr-control-label">6. CodeRepo(required)</label>
-                                                <div>
-                                                    <p>Did your team use a code repository? If yes, please provide the URL of that repository
-                                                        below. (URL)</p>
-                                                </div>
+                                                <h3 id="codeRepo" for="example" class="clr-control-label">6. Code Repo(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Did your team use a code repository? If yes, please provide the URL of that repository
+                                                        below. (URL)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="resourcesUrl" for="example" class="clr-control-label">7. ResourcesURL(required)</label>
-                                                <div>
-                                                    <p>Did your team use any other online resources to e.g. create documentation? If yes,
-                                                        please provide the URL of that resource below. (URL)</p>
-                                                </div>
+                                                <h3 id="resourcesUrl" for="example" class="clr-control-label">7. Resources URL(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Did your team use any other online resources to e.g. create documentation? If yes,
+                                                        please provide the URL of that resource below. (URL)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="teamLeader" for="example" class="clr-control-label">8. TeamLeader(required)</label>
-                                                <div>
-                                                    <p>Was there a team leader? (A team leader is someone who provides guidance,
-                                                        instruction, direction and leadership to the team.)</p>
-                                                        <p>• Yes, I was the team leader.</p>
-                                                        <p>• Yes, someone else was the team leader.</p>
-                                                        <p>• No, there was no clear leader in the team.</p>
-                                                </div>
+                                                <h3 id="teamLeader" for="example" class="clr-control-label">8. Team Leader(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Was there a team leader? (A team leader is someone who provides guidance,
+                                                        instruction, direction and leadership to the team.)</li>
+                                                    <li>
+                                                    <ul class="list">
+                                                        <li>Yes, I was the team leader.</li>
+                                                        <li>Yes, someone else was the team leader.</li>
+                                                        <li>No, there was no clear leader in the team.</li>
+                                                    </ul>
+                                                    </li>
+                                                </ul>                                              
                                             </div>
                                             <div class="clr-form-control">
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="teamManager" type="checkbox" name = "TeamManager" class="clr-checkbox">
-                                                        <label for="teamManager" class="clr-control-label"><b>9. TeamManager</b></label>
-                                                        <div>
-                                                            <p>Was there a project manager? (A project manager is someone who keeps track the
-                                                                team's progress and coordinates the actions of team members.)</p>
-                                                                <p>• Yes, I was the project manager.</p>
-                                                                <p>• Yes, someone else was the project manager.</p>
-                                                                <p>• No, there was no clear project manager in the team.</p>
-                                                        </div>
+                                                        <label for="teamManager" class="clr-control-label"><h3>9. Team Manager</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Was there a project manager? (A project manager is someone who keeps track the
+                                                                team's progress and coordinates the actions of team members.)</li>
+                                                            <li>
+                                                            <ul class="list">
+                                                                <li>Yes, I was the project manager.</li>
+                                                                <li>Yes, someone else was the project manager.</li>
+                                                                <li>No, there was no clear project manager in the team.</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -329,29 +350,38 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="socialLeader" type="checkbox" name = "SocialLeader" class="clr-checkbox">
-                                                        <label for="socialLeader" class="clr-control-label"><b>10. SocialLeader</b></label>
-                                                        <div>
-                                                            <p>Was there a social-emotional leader? (A social-emotional leader is someone who
-                                                                alleviates the frustration, disappointments and hostilities which arise in the team.)</p>
-                                                                <p>• Yes, I was the social-emotional leader.</p>
-                                                                <p>• Yes, someone else was the social-emotional leader</p>
-                                                                <p>• No, there was no clear social-emotional in the team.</p>
-                                                        </div>
+                                                        <label for="socialLeader" class="clr-control-label"><h3>10. Social Leader</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Was there a social-emotional leader? (A social-emotional leader is someone who
+                                                                alleviates the frustration, disappointments and hostilities which arise in the team.)</li>
+                                                            <li>
+                                                            <ul class="list">
+                                                                <li>Yes, I was the social-emotional leader.</li>
+                                                                <li>Yes, someone else was the social-emotional leader.</li>
+                                                                <li>No, there was no clear social-emotional in the team.</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="clr-form-control">
-                                                        <label id="teamFamiliarity" for="example" class="clr-control-label"><b>11. TeamFamiliarity(required)</b></label>
-                                                        <div>
-                                                            <p>How well do you know your team members? (Strongly disagree, Somewhat
-                                                                disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)</p>
-                                                                <p>• I knew my team members well.</p>
-                                                                <p>• I have collaborated with some of my team members before.</p>
-                                                                <p>• I have been close to some of my team members before.</p>
-                                                                <p>• I have socialized with some of my team members (outside of this hackathon) before.</p>
-                                                                <p></p>
-                                                                <a href="#references">based on Janssen et al. (2009) [7]</a>
-                                                        </div>
+                                                        <h3 id="teamFamiliarity" for="example" class="clr-control-label">11. Team Familiarity(required)</h3>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>How well do you know your team members? (Strongly disagree, Somewhat
+                                                                disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)</li>
+                                                            <li>
+                                                            <ul class="list">
+                                                                <li>I knew my team members well.</li>
+                                                                <li>I have collaborated with some of my team members before.</li>
+                                                                <li>I have been close to some of my team members before.</li>
+                                                                <li>I have socialized with some of my team members (outside of this hackathon) before.</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">based on Janssen et al. (2009) [7]</a></li>
+                                                        </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -369,42 +399,54 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <label id="satisfactionWithProcess" for="example" class="clr-control-label">12. SatisfactionWithProcess(required)</label>
-                                                <div>
-                                                    <p>Would you describe your team process as more...</p>
-                                                        <p>• (1) Inefficient to (5) Efficient</p>
-                                                        <p>• (1) Uncoordinated to (5) Coordinated</p>
-                                                        <p> (1) Unfair to (5) Fair</p>
-                                                        <p> (1) Confusing to (5) Easy to understand</p>
-                                                        <p></p>
-                                                        <a href="#references">based on Filippova et al. (2017) [6]</a>
-                                                </div>
+                                                <h3 id="satisfactionWithProcess" for="example" class="clr-control-label">12. Satisfaction With Process(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Would you describe your team process as more...</li>
+                                                    <li>
+                                                    <ul class="list">
+                                                        <li>(1) Inefficient to (5) Efficient</li>
+                                                        <li>(1) Uncoordinated to (5) Coordinated</li>
+                                                        <li>(1) Unfair to (5) Fair</li>
+                                                        <li>(1) Confusing to (5) Easy to understand</li>
+                                                    </ul>
+                                                    </li>
+                                                    <li><a href="#references">based on Filippova et al. (2017) [6]</a></li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="goalClarity" for="example" class="clr-control-label">13. GoalClarity(required)</label>
-                                                <div>
-                                                    <p>Please indicate your level of agreement with the following statements related to your
+                                                <h3 id="goalClarity" for="example" class="clr-control-label">13. Goal Clarity(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Please indicate your level of agreement with the following statements related to your
                                                         GOALS as a team. (Strongly disagree, Somewhat disagree, Neither agree nor disagree, Somewhat
-                                                        agree, Strongly agree)</p>
-                                                        <p>• I was uncertain of my duties and responsibilities in this team</p>
-                                                        <p>• I was unclear about the goals and objectives for my work in this team</p>
-                                                        <p>• I was unsure how my work relates to the overall objectives of my team.</p>
-                                                        <p></p>
-                                                        <a href="#references">based on Filippova et al. (2017) [6]</a>
-                                                </div>
+                                                        agree, Strongly agree)</li>
+                                                    <li>
+                                                    <ul class="list">
+                                                        <li>I was uncertain of my duties and responsibilities in this team.</li>
+                                                        <li>I was unclear about the goals and objectives for my work in this team.</li>
+                                                        <li>I was unsure how my work relates to the overall objectives of my team.</li>
+                                                    </ul>
+                                                    </li>
+                                                    <li><a href="#references">based on Filippova et al. (2017) [6]</a></li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="voice" for="example" class="clr-control-label">14. Voice(required)</label>
-                                                <div>
-                                                    <p>Please indicate your level of agreement with the following statements about your TEAM.
-                                                        (Strongly disagree, Somewhat disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)</p>
-                                                        <p>• Everyone had a chance to express his/her opinion.</p>
-                                                        <p>• The team members responded to the comments made by others.</p>
-                                                        <p>• The team members participated very actively during the project.</p>
-                                                        <p>• Overall, the participation of each member in the team was effective.</p>
-                                                        <p></p>
-                                                        <a href="#references">based on Filippova et al. (2017) [6]</a>
-                                                </div>
+                                                <h3 id="voice" for="example" class="clr-control-label">14. Voice(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Please indicate your level of agreement with the following statements about your TEAM.
+                                                        (Strongly disagree, Somewhat disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)</li>
+                                                    <li>
+                                                    <ul class="list">
+                                                        <li>Everyone had a chance to express his/her opinion.</li>
+                                                        <li>The team members responded to the comments made by others.</li>
+                                                        <li>The team members participated very actively during the project.</li>
+                                                        <li>Overall, the participation of each member in the team was effective.</li>
+                                                    </ul>
+                                                    </li>
+                                                    <li><a href="#references">based on Filippova et al. (2017) [6]</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -422,40 +464,47 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <label id="satisfactionWithOutcome" for="example" class="clr-control-label">15. SatisfactionWithOutcome(required)</label>
-                                                <div>
-                                                    <p>Please indicate your level of agreement with the following statements
+                                                <h3 id="satisfactionWithOutcome" for="example" class="clr-control-label">15. Satisfaction With Outcome(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Please indicate your level of agreement with the following statements
                                                         related to your SATISFACTION with your project. (Strongly disagree, Somewhat disagree, Neither agree
-                                                        nor disagree, Somewhat agree, Strongly agree)</p>
-                                                        <p>• I am satisfied with the work completed in my project.</p>
-                                                        <p>• I am satisfied with the quality of my team's output.</p>
-                                                        <p>• My ideal outcome coming into my project achieved.</p>
-                                                        <p>• My expectations towards my team were met.</p>
-                                                        <p></p>
-                                                        <a href="#references">based on Filippova et al. (2017) [6]</a>
-                                                </div>
+                                                        nor disagree, Somewhat agree, Strongly agree)</li>
+                                                    <li>
+                                                    <ul class="list">
+                                                        <li>I am satisfied with the work completed in my project.</li>
+                                                        <li>I am satisfied with the quality of my team's output.</li>
+                                                        <li>My ideal outcome coming into my project achieved.</li>
+                                                        <li>My expectations towards my team were met.</li>
+                                                    </ul>
+                                                    </li>
+                                                    <li><a href="#references">based on Filippova et al. (2017) [6]</a></li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="perceivedUsefulness" type="checkbox" name = "PerceivedUsefulness" class="clr-checkbox">
-                                                        <label for="perceivedUsefulness" class="clr-control-label" ><b>16. PerceivedUsefulness</b></label>
-                                                        <div>
-                                                            <p>Please indicate your level of agreement with the following statements related
+                                                        <label for="perceivedUsefulness" class="clr-control-label" ><h3>16. Perceived Usefulness</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Please indicate your level of agreement with the following statements related
                                                                 to the USEFULNESS of your project. (Strongly disagree, Somewhat disagree, Neither agree nor disagree,
-                                                                Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• My project improves my performance during my everyday work.</p>
-                                                                <p>• My project improves my productivity during my everyday work.</p>
-                                                                <p>• My project improves my effectiveness during my everyday work.</p>
-                                                                <p>• Overall, my project will be useful during my everyday work.</p>
-                                                                <p>Note: Only works for projects that are related to a participant’s daily work. Can be modified to be suitable for learning
-                                                                    outcomes.</p>
-                                                                <p></p>
-                                                                <a href="#references">Ajzen (1991) [1], Bhattacherjee (2001) [2], Erikson and Nilson (2007) [5], Liao et al. (2007) [8]
-                                                                    Note: Only works for projects that are related to a participant’s daily work. Can be modified to be suitable for learning
-                                                                    outcomes.</a>
-                                                        </div>
+                                                                Somewhat agree, Strongly agree)</li>
+                                                            <li>Note: Only works for projects that are related to a participant’s daily work. Can be modified to be suitable for learning
+                                                                outcomes.</li>
+                                                            <li>
+                                                            <ul class="list">
+                                                                <li>My project improves my performance during my everyday work.</li>
+                                                                <li>My project improves my productivity during my everyday work.</li>
+                                                                <li>My project improves my effectiveness during my everyday work.</li>
+                                                                <li>Overall, my project will be useful during my everyday work.</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">Ajzen (1991) [1], Bhattacherjee (2001) [2], Erikson and Nilson (2007) [5], Liao et al. (2007) [8]
+                                                                Note: Only works for projects that are related to a participant’s daily work. Can be modified to be suitable for learning
+                                                                outcomes.</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -463,20 +512,23 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="continuationIntentions" type="checkbox" name = "ContinuationIntentions" class="clr-checkbox">
-                                                        <label for="continuationIntentions" class="clr-control-label" ><b>17. ContinuationIntentions</b></label>
-                                                        <div>
-                                                            <p>Please indicate your FUTURE INTENTIONS related to your hackathon
+                                                        <label for="continuationIntentions" class="clr-control-label" ><h3>17. Continuation Intentions</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Please indicate your FUTURE INTENTIONS related to your hackathon
                                                                 project. (Strongly disagree, Somewhat disagree, Neither agree nor disagree, Somewhat agree, Strongly
-                                                                agree)
-                                                                </p>
-                                                                <p>• I intend to continue working on my hackathon project rather than not continue working on it.</p>
-                                                                <p>• My intentions are to continue working on my hackathon project rather than any other project.</p>
-                                                                <p>• If I could, I would like to continue working on my hackathon project as much as possible.</p>
-                                                                <p>Note: Can be modified to be suitable for learning outcomes.</p>
-                                                                <p></p>
-                                                                <a href="#references">Ajzen (1991) [1], Bhattacherjee (2001) [2], Erikson and Nilson (2007) [5], Liao et al. (2007) [8]
-                                                                    Note: Can be modified to be suitable for learning outcomes</a>
-                                                        </div>
+                                                                agree)</li>
+                                                            <li>Note: Can be modified to be suitable for learning outcomes.</li>
+                                                            <li>
+                                                            <ul class="list">
+                                                                <li>I intend to continue working on my hackathon project rather than not continue working on it.</li>
+                                                                <li>My intentions are to continue working on my hackathon project rather than any other project.</li>
+                                                                <li>If I could, I would like to continue working on my hackathon project as much as possible.</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">Ajzen (1991) [1], Bhattacherjee (2001) [2], Erikson and Nilson (2007) [5], Liao et al. (2007) [8]
+                                                                Note: Can be modified to be suitable for learning outcomes</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -484,21 +536,24 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="behavioralControl" type="checkbox" name = "BehavioralControl" class="clr-checkbox">
-                                                        <label for="behavioralControl" class="clr-control-label" ><b>18. BehavioralControl</b></label>
-                                                        <div>
-                                                            <p>Please indicate your level of agreement with the following statements related to
+                                                        <label for="behavioralControl" class="clr-control-label" ><h3>18. Behavioral Control</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Please indicate your level of agreement with the following statements related to
                                                                 your ABILITY to continue working on your hackathon project. (Strongly disagree, Somewhat disagree,
-                                                                Neither agree nor disagree, Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• I would be able to continue working on my hackathon project.</p>
-                                                                <p> Continuing to work on my hackathon project is entirely under my control.</p>
-                                                                <p>• I have the resources, knowledge, and ability to continue working on my project after the
-                                                                    hackathon.</p>
-                                                                <p>Note: Can be modified to be suitable for learning outcomes.</p>
-                                                                <p></p>
-                                                                <a href="#references">Liao et al. (2007) [8] based on Ajzen (1991) [1]
-                                                                    Note: Can be modified to be suitable for learning outcomes.</a>
-                                                        </div>
+                                                                Neither agree nor disagree, Somewhat agree, Strongly agree)</li>
+                                                            <li>Note: Can be modified to be suitable for learning outcomes.</li>
+                                                            <li>
+                                                            <ul class="list">
+                                                                <li>I would be able to continue working on my hackathon project.</li>
+                                                                <li>Continuing to work on my hackathon project is entirely under my control.</li>
+                                                                <li>I have the resources, knowledge, and ability to continue working on my project after the
+                                                                    hackathon.</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">Liao et al. (2007) [8] based on Ajzen (1991) [1]
+                                                                Note: Can be modified to be suitable for learning outcomes.</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -521,26 +576,28 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="mentoringExperience" type="checkbox" name = "MentoringExperience" class="clr-checkbox">
-                                                        <label for="mentoringExperience" class="clr-control-label" ><b>19. MentoringExperience</b></label>
-                                                        <div>
-                                                            <p>To what extent do you agree with the following statements about THE
+                                                        <label for="mentoringExperience" class="clr-control-label" ><h3>19. Mentoring Experience</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>To what extent do you agree with the following statements about THE
                                                                 SUPPORT THE MENTORS PROVIDED during this hackathon? (Strongly disagree, Somewhat disagree,
-                                                                Neither agree nor disagree, Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• The mentors supported us to scope our project.</p>
-                                                                <p>• The mentors took decisions about the direction of our project.</p>
-                                                                <p>• The mentors provided us with solutions to technical problems we encountered.</p>
-                                                                <p>• The mentors helped us to find our own solutions to technical problems we encountered.</p>
-                                                                <p>• The mentor were mainly focused on our learning progress.</p>
-                                                                <p>• The mentors were mainly focused on our project progress.</p>
-                                                                <p>• The mentors were part of our team.</p>
-                                                                <p>• The mentors showed interest in us beyond the project we were working on.</p>
-                                                                <p>• We could reach the mentors when we needed help.</p>
-                                                                <p>Note: Needs to be adapted for the specific context.</p>
-                                                                <p></p>
-                                                                <a href="#references">based on Nolte et al. (2020) [9]
-                                                                    Note: Needs to be adapted for the specific context.</a>
-                                                        </div>
+                                                                Neither agree nor disagree, Somewhat agree, Strongly agree)</li>
+                                                            <li>Note: Needs to be adapted for the specific context.</li>
+                                                            <ul class="list">
+                                                                <li>The mentors supported us to scope our project.</li>
+                                                                <li>The mentors took decisions about the direction of our project.</li>
+                                                                <li>The mentors provided us with solutions to technical problems we encountered.</li>
+                                                                <li>The mentors helped us to find our own solutions to technical problems we encountered.</li>
+                                                                <li>The mentor were mainly focused on our learning progress.</li>
+                                                                <li>The mentors were mainly focused on our project progress.</li>
+                                                                <li>The mentors were part of our team.</li>
+                                                                <li>The mentors showed interest in us beyond the project we were working on.</li>
+                                                                <li>We could reach the mentors when we needed help.</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">based on Nolte et al. (2020) [9]
+                                                                Note: Needs to be adapted for the specific context.</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -548,12 +605,12 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="mentoringOther" type="checkbox" name = "MentoringOther" class="clr-checkbox">
-                                                        <label for="mentoringOther" class="clr-control-label" ><b>20. MentoringOther</b></label>
-                                                        <div>
-                                                            <p>What could the MENTORS have done to improve your experience during the
-                                                                hackathon? (text entry)
-                                                                </p>
-                                                        </div>
+                                                        <label for="mentoringOther" class="clr-control-label" ><h3>20. Mentoring Other</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>What could the MENTORS have done to improve your experience during the
+                                                                hackathon? (text entry)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -576,20 +633,22 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="communityIdentification" type="checkbox" name = "CommunityIdentification" class="clr-checkbox">
-                                                        <label for="communityIdentification" class="clr-control-label"><b>21. CommunityIdentification</b></label>
-                                                        <div>
-                                                            <p>Do people identify with the community? (Strongly disagree, Somewhat
-                                                                disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• I identify with other members of this community.</p>
-                                                                <p>• I am like other members of this community.</p>
-                                                                <p>• This community is an important reflection of who I am.</p>
-                                                                <p>• I would like to continue working with this community.</p>
-                                                                <p>• I dislike being a member of this community.</p>
-                                                                <p>• I would rather belong to another community.</p>
-                                                                <p></p>
-                                                                <a href="#references">Ellemers et al. (1999) [3] based on Brown et al. (1986)</a>
-                                                        </div>
+                                                        <label for="communityIdentification" class="clr-control-label"><h3>21. Community Identification</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Do people identify with the community? (Strongly disagree, Somewhat
+                                                                disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)</li>
+                                                            <ul class="list">
+                                                                <li>I identify with other members of this community.</li>
+                                                                <li>I am like other members of this community.</li>
+                                                                <li>This community is an important reflection of who I am.</li>
+                                                                <li>I would like to continue working with this community.</li>
+                                                                <li>I dislike being a member of this community.</li>
+                                                                <li>I would rather belong to another community.</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">Ellemers et al. (1999) [3] based on Brown et al. (1986)</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -597,28 +656,30 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="socialCapital" type="checkbox" name = "SocialCapital" class="clr-checkbox">
-                                                        <label for="socialCapital" class="clr-control-label"><b>22. SocialCapital</b></label>
-                                                        <div>
-                                                            <p>To what extent do you agree with the following statements about your relationship
+                                                        <label for="socialCapital" class="clr-control-label"><h3>22. Social Capital</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>To what extent do you agree with the following statements about your relationship
                                                                 with [COMMUNITY_THAT_ORGANIZED_THE_EVENT]? (Strongly disagree, Somewhat disagree, Neither
-                                                                agree nor disagree, Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• I feel I am part of this community. (bridging)</p>
-                                                                <p>• I am interested in what goes on in this community. (bridging)</p>
-                                                                <p>• Interacting with other members of this community makes me want to try new things. (bridging)</p>
-                                                                <p>• I am willing to spend time to support general activities in this community. (bridging)</p>
-                                                                <p>• Through this community I come into contact with new people all the time. (bridging)</p>
-                                                                <p>• There are several people in this community that I trust to help me solve my problems.
-                                                                (bonding)</p>
-                                                                <p>• I know someone in this community that I can turn to if I urgently need help. (bonding)</p>
-                                                                <p>• There is someone in this community that I can turn to for advice about making important
-                                                                decision. (bonding)</p>
-                                                                <p>• The other members of this community would be good job references for me. (bonding)</p>
-                                                                <p>• I do not know people in this community well enough to get them to do anything important.
-                                                                (bonding)</p>
-                                                                <p></p>
-                                                                <a href="#references">Ellison et al. (2007) [4]</a>
-                                                        </div>
+                                                                agree nor disagree, Somewhat agree, Strongly agree)</li>
+                                                            <ul class="list">
+                                                                <li>I feel I am part of this community. (bridging)</li>
+                                                                <li>I am interested in what goes on in this community. (bridging)</li>
+                                                                <li>Interacting with other members of this community makes me want to try new things. (bridging)</li>
+                                                                <li>I am willing to spend time to support general activities in this community. (bridging)</li>
+                                                                <li>Through this community I come into contact with new people all the time. (bridging)</li>
+                                                                <li>There are several people in this community that I trust to help me solve my problems.
+                                                                    (bonding)</li>
+                                                                <li>I know someone in this community that I can turn to if I urgently need help. (bonding)</li>
+                                                                <li>There is someone in this community that I can turn to for advice about making important
+                                                                    decision. (bonding)</li>
+                                                                <li>The other members of this community would be good job references for me. (bonding)</li>
+                                                                <li>I do not know people in this community well enough to get them to do anything important.
+                                                                    (bonding)</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">Ellison et al. (2007) [4]</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -641,18 +702,20 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="satisfactionWithHackathon" type="checkbox" name = "SatisfactionWithHackathon" class="clr-checkbox">
-                                                        <label for="satisfactionWithHackathon" class="clr-control-label"><b>23. SatisfactionWithHackathon</b></label>
-                                                        <div>
-                                                            <p>How do you feel about your OVERALL EXPERIENCE participating in this
-                                                                hackathon?
-                                                                </p>
-                                                                <p>• (1) Very dissatisfied to (5) Very satisfied</p>
-                                                                <p>• (1) Very displeased to (5) Very pleased</p>
-                                                                <p>• (1) Very frustrated to (5) Very contented</p>
-                                                                <p>• (1) Absolutely terrible to (5) Absolutely delighted</p>
-                                                                <p></p>
-                                                                <a href="#references">Bhattacherjee (2001) [2] based on Spreng et al. (1996) [12]</a>
-                                                        </div>
+                                                        <label for="satisfactionWithHackathon" class="clr-control-label"><h3>23. Satisfaction With Hackathon</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>How do you feel about your OVERALL EXPERIENCE participating in this
+                                                                hackathon?</li>
+                                                            <ul class="list">
+                                                                <li>(1) Very dissatisfied to (5) Very satisfied</li>
+                                                                <li>(1) Very displeased to (5) Very pleased</li>
+                                                                <li>(1) Very frustrated to (5) Very contented</li>
+                                                                <li>(1) Absolutely terrible to (5) Absolutely delighted</li>
+                                                            </ul>
+                                                            </li>
+                                                            <li><a href="#references">Bhattacherjee (2001) [2] based on Spreng et al. (1996) [12]</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -660,12 +723,12 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="futureParticipationIntentions"  type="checkbox" name = "FutureParticipationIntentions" class="clr-checkbox">
-                                                        <label for="futureParticipationIntentions"class="clr-control-label"><b>24. FutureParticipationIntentions</b></label>
-                                                        <div>
-                                                            <p>Do you plan to participate in a similar event in the future? (Definitely
-                                                                not, Probably not, Might of might not, Probably yes, Definitely yes)
-                                                                </p>
-                                                        </div>
+                                                        <label for="futureParticipationIntentions"class="clr-control-label"><h3>24. Future Participation Intentions</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Do you plan to participate in a similar event in the future? (Definitely
+                                                                not, Probably not, Might of might not, Probably yes, Definitely yes)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -673,12 +736,12 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="recommendationLikeliness"  type="checkbox" name = "RecommendationLikeliness" class="clr-checkbox">
-                                                        <label for="recommendationLikeliness" class="clr-control-label"><b>25. RecommendationLikeliness</b></label>
-                                                        <div>
-                                                            <p>How likely would you recommend a similar hackathon to a friend or
-                                                                colleague? (0 – Wouldn’t recommend to 10 – Highly recommend)                                                                
-                                                                </p>
-                                                        </div>
+                                                        <label for="recommendationLikeliness" class="clr-control-label"><h3>25. Recommendation Likeliness</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>How likely would you recommend a similar hackathon to a friend or
+                                                                colleague? (0 – Wouldn’t recommend to 10 – Highly recommend)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -686,17 +749,19 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="sessionSatisfaction" type="checkbox" name = "SessionSatisfaction" class="clr-checkbox">
-                                                        <label for="sessionSatisfaction" class="clr-control-label"><b>26. SessionSatisfaction</b></label>
-                                                        <div>
-                                                            <p>Please rate how SATISFIED you were with the following sessions. (Not at all, To
-                                                                some extent, To a moderate extent, To a large extent, Completely)
-                                                                </p>
-                                                                <p>• Pre-event webinar</p>
-                                                                <p>• Checkpoints</p>
-                                                                <p>• Mentoring sessions</p>
-                                                                <p></p>
-                                                                <p>Note: Needs to be adapted based on the design of each event.</p>
-                                                        </div>
+                                                        <label for="sessionSatisfaction" class="clr-control-label"><h3>26. Session Satisfaction</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Please rate how SATISFIED you were with the following sessions. (Not at all, To
+                                                                some extent, To a moderate extent, To a large extent, Completely)</li>
+                                                            <li>Note: Needs to be adapted based on the design of each event.</li>
+                                                            <ul class="list">
+                                                                <li>Pre-event webinar</li>
+                                                                <li>Checkpoints</li>
+                                                                <li>Mentoring sessions</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -704,17 +769,19 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="sessionUsefulness" type="checkbox" name = "SessionUsefulness" class="clr-checkbox">
-                                                        <label for="sessionUsefulness" class="clr-control-label"><b>27. SessionUsefulness</b></label>
-                                                        <div>
-                                                            <p>Please rate how USEFUL you found the following sessions. (Not useful, Slightly
-                                                                useful, Moderately useful, Useful, Very useful)
-                                                                </p>
-                                                                <p>• Pre-event webinar</p>
-                                                                <p>• Checkpoints</p>
-                                                                <p>• Mentoring sessions</p>
-                                                                <p></p>
-                                                                <p>Note: Needs to be adapted based on the design of each event.</p>
-                                                        </div>
+                                                        <label for="sessionUsefulness" class="clr-control-label"><h3>27. Session Usefulness</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Please rate how USEFUL you found the following sessions. (Not useful, Slightly
+                                                                useful, Moderately useful, Useful, Very useful)</li>
+                                                            <li>Note: Needs to be adapted based on the design of each event.</li>
+                                                            <ul class="list">
+                                                                <li>Pre-event webinar</li>
+                                                                <li>Checkpoints</li>
+                                                                <li>Mentoring sessions</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -722,17 +789,19 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="sessionEnjoyment" type="checkbox" name = "SessionEnjoyment" class="clr-checkbox">
-                                                        <label for="sessionEnjoyment" class="clr-control-label"><b>28. SessionEnjoyment</b></label>
-                                                        <div>
-                                                            <p>Please rate how ENJOYABLE you found the following sessions. (Not enjoyable,
-                                                                Slightly enjoyable, Moderately enjoyable, Enjoyable, Very enjoyable)
-                                                                </p>
-                                                                <p>• Pre-event webinar</p>
-                                                                <p>• Checkpoints</p>
-                                                                <p>• Mentoring sessions</p>
-                                                                <p></p>
-                                                                <p>Note: Needs to be adapted based on the design of each event.</p>
-                                                        </div>
+                                                        <label for="sessionEnjoyment" class="clr-control-label"><h3>28. Session Enjoyment</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Please rate how ENJOYABLE you found the following sessions. (Not enjoyable,
+                                                                Slightly enjoyable, Moderately enjoyable, Enjoyable, Very enjoyable)</li>
+                                                            <li>Note: Needs to be adapted based on the design of each event.</li>
+                                                            <ul class="list">
+                                                                <li>Pre-event webinar</li>
+                                                                <li>Checkpoints</li>
+                                                                <li>Mentoring sessions</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -740,10 +809,11 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="goodEvent" type="checkbox" name = "GoodEvent" class="clr-checkbox">
-                                                        <label for="goodEvent" class="clr-control-label"><b>29. GoodEvent</b></label>
-                                                        <div>
-                                                            <p>In your opinion, what was good about the event? (text entry)</p>
-                                                        </div>
+                                                        <label for="goodEvent" class="clr-control-label"><h3>29. Good Event</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>In your opinion, what was good about the event? (text entry)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -751,10 +821,11 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="improveEvent" type="checkbox" name = "ImproveEvent" class="clr-checkbox">
-                                                        <label for="improveEvent" class="clr-control-label"><b>30. ImproveEvent</b></label>
-                                                        <div>
-                                                            <p>How could the event be improved? (text entry)</p>
-                                                        </div>
+                                                        <label for="improveEvent" class="clr-control-label"><h3>30. Improve Event</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>How could the event be improved? (text entry)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -762,10 +833,11 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="openSharing" type="checkbox" name = "OpenSharing"  class="clr-checkbox">
-                                                        <label for="openSharing" class="clr-control-label"><b>31. OpenSharing</b></label>
-                                                        <div>
-                                                            <p>Is there anything else you would like to share with the organizers? (text entry)</p>
-                                                        </div>
+                                                        <label for="openSharing" class="clr-control-label"><h3>31. Open Sharing</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Is there anything else you would like to share with the organizers? (text entry)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -788,11 +860,12 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="programmingExperienceYears" type="checkbox" name = "ProgrammingExperienceYears" class="clr-checkbox">
-                                                        <label for="programmingExperienceYears" class="clr-control-label"><b>32. ProgrammingExperienceYears</b></label>
-                                                        <div>
-                                                            <p>How many years of programming experience do you have? (number
-                                                                entry)</p>
-                                                        </div>
+                                                        <label for="programmingExperienceYears" class="clr-control-label"><h3>32. Programming Experience Years</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>How many years of programming experience do you have? (number
+                                                                entry)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -800,15 +873,14 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="programmingExperienceComparison" type="checkbox" name = "ProgrammingExperienceComparison" class="clr-checkbox">
-                                                        <label for="programmingExperienceComparison" class="clr-control-label"><b>33. ProgrammingExperienceComparison</b></label>
-                                                        <div>
-                                                            <p>Referring back to the people you collaborated with at this
+                                                        <label for="programmingExperienceComparison" class="clr-control-label"><h3>33. Programming Experience Comparison</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>Referring back to the people you collaborated with at this
                                                                 hackathon, how do you estimate your programming experience compared to them? (Very
-                                                                inexperienced, Inexperienced, Comparable, Experienced, Very experienced)
-                                                                </p>
-                                                                <p></p>
-                                                                <a href="#references">Siegmund et al. (2014) [11]</a>
-                                                        </div>
+                                                                inexperienced, Inexperienced, Comparable, Experienced, Very experienced)</li>
+                                                            <li><a href="#references">Siegmund et al. (2014) [11]</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -816,20 +888,23 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="programmingAbility" type="checkbox" name = "ProgrammingAbility" class="clr-checkbox">
-                                                        <label for="programmingAbility" class="clr-control-label"><b>34. ProgrammingAbility</b></label>
-                                                        <div>
-                                                            <p>To what extend do you agree with the following statements about your ABILITY
+                                                        <label for="programmingAbility" class="clr-control-label"><h3>34. Programming Ability</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>To what extend do you agree with the following statements about your ABILITY
                                                                 to use these technologies? (Strongly disagree, Somewhat disagree, Neither agree nor disagree,
-                                                                Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• I am able to write some parts of programs in JAVA.</p>
-                                                                <p>• I am able to write some parts of programs in JAVASCRIPT.</p>
-                                                                <p>• I am able to write some parts of programs in PYTHON.</p>
-                                                                <p>• I am able to write some parts of programs in HTML/HTML5.</p>
-                                                                <p>• I am able to write some parts of programs in DJANGO/AIRAVATA.</p>
-                                                                <p>• I can make some use of REQUESTS, JSON and XML.</p>
-                                                                <p>• I can make some use of JUPYTER NOTEBOOKS.</p>
-                                                        </div>
+                                                                Somewhat agree, Strongly agree)</li>
+                                                            <ul class="list">
+                                                                <li>I am able to write some parts of programs in JAVA.</li>
+                                                                <li>I am able to write some parts of programs in JAVASCRIPT.</li>
+                                                                <li>I am able to write some parts of programs in PYTHON.</li>
+                                                                <li>I am able to write some parts of programs in HTML/HTML5</li>
+                                                                <li>I am able to write some parts of programs in DJANGO/AIRAVATA.</li>
+                                                                <li>I can make some use of REQUESTS, JSON and XML.</li>
+                                                                <li>I can make some use of JUPYTER NOTEBOOKS.</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -837,20 +912,23 @@
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="programmingComfort" type="checkbox" name = "ProgrammingComfort" class="clr-checkbox">
-                                                        <label for="programmingComfort" class="clr-control-label"><b>35. ProgrammingComfort</b></label>
-                                                        <div>
-                                                            <p>To what extend do you agree with the following statements about your LEVEL
+                                                        <label for="programmingComfort" class="clr-control-label"><h3>35. Programming Comfort</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>To what extend do you agree with the following statements about your LEVEL
                                                                 OF COMFORT using these technologies? (Strongly disagree, Somewhat disagree, Neither agree nor
-                                                                disagree, Somewhat agree, Strongly agree)
-                                                                </p>
-                                                                <p>• I am able to write some parts of programs in JAVA.</p>
-                                                                <p>• I am able to write some parts of programs in JAVASCRIPT.</p>
-                                                                <p>• I am able to write some parts of programs in PYTHON.</p>
-                                                                <p>• I am able to write some parts of programs in HTML/HTML5.</p>
-                                                                <p>• I am able to write some parts of programs in DJANGO/AIRAVATA.</p>
-                                                                <p>• I can make some use of REQUESTS, JSON and XML.</p>
-                                                                <p>• I can make some use of JUPYTER NOTEBOOKS.</p>
-                                                        </div>
+                                                                disagree, Somewhat agree, Strongly agree)</li>
+                                                            <ul class="list">
+                                                                <li>I am able to write some parts of programs in JAVA.</li>
+                                                                <li>I am able to write some parts of programs in JAVASCRIPT.</li>
+                                                                <li>I am able to write some parts of programs in PYTHON.</li>
+                                                                <li>I am able to write some parts of programs in HTML/HTML5</li>
+                                                                <li>I am able to write some parts of programs in DJANGO/AIRAVATA.</li>
+                                                                <li>I can make some use of REQUESTS, JSON and XML.</li>
+                                                                <li>I can make some use of JUPYTER NOTEBOOKS.</li>
+                                                            </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -870,44 +948,43 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <label id="age" for="example" class="clr-control-label">36. Age(required)</label>
-                                                <div>
-                                                    <p>How old are you currently? (18 to 24, 25 to 34, 35 to 44, 45 to 54, 55 to 64, 65 to 74, 75 or older,
-                                                        Prefer not to say)
-                                                        </p>
-                                                </div>
+                                                <h3 id="age" for="example" class="clr-control-label">36. Age(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>How old are you currently? (18 to 24, 25 to 34, 35 to 44, 45 to 54, 55 to 64, 65 to 74, 75 or older,
+                                                        Prefer not to say)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="gender" for="example" class="clr-control-label">37. Gender(required)</label>
-                                                <div>
-                                                    <p>Are you…? (Female, Male, Non-binary, Prefer not to say)
-                                                        </p>
-                                                    <p>Note from Hack the Hackathon: Instead use text entry field with the following statement “If you feel comfortable, we
-                                                        invite you to share your gender with us.”
-                                                        </p>
-                                                </div>
+                                                <h3 id="gender" for="example" class="clr-control-label">37. Gender(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Are you…? (Female, Male, Non-binary, Prefer not to say)</li>
+                                                    <li>Note from Hack the Hackathon: Instead use text entry field with the following statement “If you feel comfortable, we
+                                                        invite you to share your gender with us.”</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
                                                 <div class="clr-control-container">
                                                     <div class="clr-checkbox-wrapper">
                                                         <input id="education" type="checkbox" name = "Education" class="clr-checkbox">
-                                                        <label for="education" class="clr-control-label"><b>38. Education</b></label>
-                                                        <div>
-                                                            <p>What is highest level of formal education that you have completed until now? (High school
+                                                        <label for="education" class="clr-control-label"><h3>38. Education</h3></label>
+                                                        <ul class="list-unstyled">
+                                                            <li>___________</li>
+                                                            <li>>What is highest level of formal education that you have completed until now? (High school
                                                                 diploma or GED, Some college, Associate and/or bachelor's degree, Bachelor's degree, Professional
-                                                                degree, Master's degree, Doctorate, Prefer not to say)
-                                                                </p>
-                                                        </div>
+                                                                degree, Master's degree, Doctorate, Prefer not to say)</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="clr-form-control">
-                                                <label id="minority" for="example" class="clr-control-label">39. Minority(required)</label>
-                                                <div>
-                                                    <p>Do you consider yourself a minority? (For example in terms of race, gender, expertise or in
-                                                        another way) (Yes, No, Prefer not to say)
-                                                        </p>
-                                                </div>
+                                                <h3 id="minority" for="example" class="clr-control-label">39. Minority(required)</h3>
+                                                <ul class="list-unstyled">
+                                                    <li>___________</li>
+                                                    <li>Do you consider yourself a minority? (For example in terms of race, gender, expertise or in
+                                                        another way) (Yes, No, Prefer not to say)</li>
+                                                </ul>
                                             </div>
                                             <div class="clr-form-control">
                                                 <label  for="example" class="clr-control-label"></label>
@@ -956,13 +1033,21 @@
             <nav class="sidenav">
                 <section class="sidenav-content">
                     <section class="nav-group collapsible">
+                        <input id="tabexample2" type="checkbox">
+                        <label for="tabexample2">Disclaimer</label>
+                        <ul class="nav-list">
+                            <li><a href="#disclaimer" class="nav-link">Agreement</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
                         <input id="tabexample1" type="checkbox">
                         <label for="tabexample1">Information about the hackathon</label>
                         <ul class="nav-list">
                             <li><a href="#nameHackathon" class="nav-link">Name of Hackathon</a></li>
                             <li><a href="#surveyPurpose"class="nav-link">Survey purpose</a></li>
-                            <li><a href="#roleOrganizer"class="nav-link">Name of organizer</a></li>
-                            <li><a href="#nameOrganizer"class="nav-link">Role of organizer</a></li>
+                            <li><a href="#organizers_label"class="nav-link">Name of organizer</a></li>
+                            <li><a href="#contactPerson"class="nav-link">Contact Person</a></li>
+                            <li><a href="#hackathonTheme"class="nav-link">Hackathon Theme</a></li>
                             <li><a href="#emailOrganizer"class="nav-link">Email of organizer</a></li>
                             <li><a href="#date"class="nav-link">Date of Hackathon</a></li>
                             <li><a href="#urlEvent"class="nav-link">Url of event</a></li>
@@ -973,26 +1058,25 @@
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
-                        <input id="tabexample2" type="checkbox">
-                        <label for="tabexample2">Disclaimer</label>
-                        <ul class="nav-list">
-                            <li><a href="#disclaimer" class="nav-link">Agreement</a></li>
-                        </ul>
-                    </section>
-                    <section class="nav-group collapsible">
                         <input id="tabexample3" type="checkbox">
                         <label for="tabexample3">Individual measures</label>
                         <ul class="nav-list">
                             <li><a href="#motivation" class="nav-link">1. Motivation(required)</a>
-                            <li><a href="#motivationOther"class="nav-link">2. MotivationOther(required)</a></li>
-                            <li><a href="#eventparticipation"class="nav-link">3. EventParticipation(required)</a></li>
-                            <li><a href="#teamId"class="nav-link">4. TeamId(required)</a></li>
-                            <li><a href="#teamSize"class="nav-link">5. TeamSize(required)</a></li>
-                            <li><a href="#codeRepo"class="nav-link">6. CodeRepo(required)</a></li>
-                            <li><a href="#resourcesUrl"class="nav-link">7. ResourcesURL(required)</a></li>
-                            <li><a href="#teamLeader" class="nav-link">8. TeamLeader(required)</a></li>
-                            <li><a href="#teamManager"class="nav-link">9. TeamManager</a></li>
-                            <li><a href="#socialLeader"class="nav-link">10. SocialLeader</a></li>
+                            <li><a href="#motivationOther"class="nav-link">2. Motivation Other(required)</a></li>
+                            <li><a href="#eventparticipation"class="nav-link">3. Event Participation(required)</a></li>
+                        </ul>
+                    </section>
+                    <section class="nav-group collapsible">
+                        <input id="tabexample3" type="checkbox">
+                        <label for="tabexample3">Team composition</label>
+                        <ul class="nav-list">
+                            <li><a href="#teamId"class="nav-link">4. Team Id(required)</a></li>
+                            <li><a href="#teamSize"class="nav-link">5. Team Size(required)</a></li>
+                            <li><a href="#codeRepo"class="nav-link">6. Code Repo(required)</a></li>
+                            <li><a href="#resourcesUrl"class="nav-link">7. Resources URL(required)</a></li>
+                            <li><a href="#teamLeader" class="nav-link">8. Team Leader(required)</a></li>
+                            <li><a href="#teamManager"class="nav-link">9. Team Manager</a></li>
+                            <li><a href="#socialLeader"class="nav-link">10. Social Leader</a></li>
                             <li><a href="#teamFamiliarity"class="nav-link">11. Team Familiarity</a></li>
                         </ul>
                     </section>
@@ -1000,8 +1084,8 @@
                         <input id="tabexample4" type="checkbox">
                         <label for="tabexample4">Team process</label>
                         <ul class="nav-list">
-                            <li><a href="#satisfactionWithProcess" class="nav-link">12. SatisfactionWithProcess(required)</a>
-                            <li><a href="#goalClarity" class="nav-link">13. GoalClarity(required)</a></li>
+                            <li><a href="#satisfactionWithProcess" class="nav-link">12. Satisfaction With Process(required)</a>
+                            <li><a href="#goalClarity" class="nav-link">13. Goal Clarity(required)</a></li>
                             <li><a href="#voice" class="nav-link">14. Voice(required)</a></li>
                         </ul>
                     </section>
@@ -1009,18 +1093,18 @@
                         <input id="tabexample5" type="checkbox">
                         <label for="tabexample5">Project measures</label>
                         <ul class="nav-list">
-                            <li><a href="#satisfactionWithOutcome" class="nav-link">15. SatisfactionWithOutcome(required)</a>
-                            <li><a href="#perceivedUsefulness"class="nav-link">16. PerceivedUsefulness</a></li>
-                            <li><a href="#continuationIntentions"class="nav-link">17. ContinuationIntentions</a></li>
-                            <li><a href="#behavioralControl"class="nav-link">18. BehavioralControl</a></li>
+                            <li><a href="#satisfactionWithOutcome" class="nav-link">15. Satisfaction With Outcome(required)</a>
+                            <li><a href="#perceivedUsefulness"class="nav-link">16. Perceived Usefulness</a></li>
+                            <li><a href="#continuationIntentions"class="nav-link">17. Continuation Intentions</a></li>
+                            <li><a href="#behavioralControl"class="nav-link">18. Behavioral Control</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
                         <input id="tabexample6" type="checkbox">
                         <label for="tabexample6">Mentoring</label>
                         <ul class="nav-list">
-                            <li><a href="#mentoringExperience" class="nav-link">19. MentoringExperience</a>
-                            <li><a href="#mentoringOther"class="nav-link">20. MentoringOther</a></li>
+                            <li><a href="#mentoringExperience" class="nav-link">19. Mentoring Experience</a>
+                            <li><a href="#mentoringOther"class="nav-link">20. Mentoring Other</a></li>
 
                         </ul>
                     </section>
@@ -1028,33 +1112,33 @@
                         <input id="tabexample7" type="checkbox">
                         <label for="tabexample7">Community measures</label>
                         <ul class="nav-list">
-                            <li><a href="#communityIdentification" class="nav-link">21. CommunityIdentification</a>
-                            <li><a href="#socialCapital"class="nav-link">22. SocialCapital</a></li>
+                            <li><a href="#communityIdentification" class="nav-link">21. Community Identification</a>
+                            <li><a href="#socialCapital"class="nav-link">22. Social Capital</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
                         <input id="tabexample8" type="checkbox">
                         <label for="tabexample8">Event measures</label>
                         <ul class="nav-list">
-                            <li><a href="#satisfactionWithHackathon" class="nav-link">23. SatisfactionWithHackathon</a>
-                            <li><a href="#futureParticipationIntentions"class="nav-link">24. FutureParticipationIntentions</a></li>
-                            <li><a href="#recommendationLikeliness"class="nav-link">25. RecommendationLikeliness</a></li>
-                            <li><a href="#sessionSatisfaction"class="nav-link">26. SessionSatisfaction</a></li>
-                            <li><a href="#sessionUsefulness"class="nav-link">27. SessionUsefulness</a></li>
-                            <li><a href="#sessionEnjoyment"class="nav-link">28. SessionEnjoyment</a></li>
-                            <li><a href="#goodEvent"class="nav-link">29. GoodEvent</a></li>
-                            <li><a href="#improveEvent" class="nav-link">30. ImproveEvent</a></li>
-                            <li><a href="#openSharing"class="nav-link">31. OpenSharing</a></li>
+                            <li><a href="#satisfactionWithHackathon" class="nav-link">23. Satisfaction With Hackathon</a>
+                            <li><a href="#futureParticipationIntentions"class="nav-link">24. Future Participation Intentions</a></li>
+                            <li><a href="#recommendationLikeliness"class="nav-link">25. Recommendation Likeliness</a></li>
+                            <li><a href="#sessionSatisfaction"class="nav-link">26. Session Satisfaction</a></li>
+                            <li><a href="#sessionUsefulness"class="nav-link">27. Session Usefulness</a></li>
+                            <li><a href="#sessionEnjoyment"class="nav-link">28. Session Enjoyment</a></li>
+                            <li><a href="#goodEvent"class="nav-link">29. Good Event</a></li>
+                            <li><a href="#improveEvent" class="nav-link">30. Improve Event</a></li>
+                            <li><a href="#openSharing"class="nav-link">31. Open Sharing</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
                         <input id="tabexample9" type="checkbox">
                         <label for="tabexample9">Individual programming experience</label>
                         <ul class="nav-list">
-                            <li><a href="#programmingExperienceYears" class="nav-link">32. ProgrammingExperienceYears</a>
-                            <li><a href="#programmingExperienceComparison"class="nav-link">33. ProgrammingExperienceComparison</a></li>
-                            <li><a href="#programmingAbility"class="nav-link">34. ProgrammingAbility</a></li>
-                            <li><a href="#programmingComfort"class="nav-link">35. ProgrammingComfort</a></li>
+                            <li><a href="#programmingExperienceYears" class="nav-link">32. Programming Experience Years</a>
+                            <li><a href="#programmingExperienceComparison"class="nav-link">33. Programming Experience Comparison</a></li>
+                            <li><a href="#programmingAbility"class="nav-link">34. Programming Ability</a></li>
+                            <li><a href="#programmingComfort"class="nav-link">35. Programming Comfort</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
