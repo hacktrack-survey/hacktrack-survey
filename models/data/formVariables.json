@@ -30,7 +30,7 @@
   "SocialCapital": ["on"],
   "SatisfactionWithHackathon": ["on"],
   "FutureParticipationIntentions": ["on"],
-  "RecommendationLikelyness": ["on"],
+  "RecommendationLikeliness": ["on"],
   "SessionSatisfaction": ["on"],
   "SessionUsefulness": ["on"],
   "SessionEnjoyment": ["on"],

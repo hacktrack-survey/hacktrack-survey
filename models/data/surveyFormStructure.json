@@ -118,7 +118,7 @@
                 }
             },
             {
-                "ContinuationIntention": {
+                "ContinuationIntentions": {
                     "static": false,
                     "index": [24]
                 }
