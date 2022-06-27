@@ -38,12 +38,7 @@ function buildAndSendSurvey(req, res) {
         responseData.responderUri,
         dbEntry.uuid
       );
-      res.send(
-        "Submit successful! Here you go: <a href=" +
-          responseData.responderUri +
-          ">Survey-Link</a>! Your Survey-ID: " +
-          dbEntry.uuid
-      );
+      res.render("successfullyCreatedSurvey", {post_url:req.originalUrl,uuid:dbEntry.uuid,formlink:responseData.responderUri,dashboardlink:"localhost:3001/api/form/"+dbEntry.uuid});
     });
 }
 
