@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/modern-normalize/modern-normalize.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@cds/core/global.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@cds/core/styles/theme.dark.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@cds/city/css/bundles/default.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@clr/ui/clr-ui.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/@cds/core/styles/shim.clr-ui.min.css" rel="stylesheet" />
+    <title>Successfully created your Surveys</title>
+</head>
+<body cds-text="body" cds-theme="">
+  <div class="main-container">
+    <div class="alert alert-app-level">
+    </div>
+    <header class="header header-6">
+        <div class="branding">
+            <span class="title">Creation Form For Surveys</span>
+        </div>
+      </header>
+
+      <div class="card">
+        <div class="card-img">
+            <img src="/images/checkmark.png" alt="checmarkimage" style="width:128px;height:128px; display:block; margin-left:auto; margin-right:auto; margin-top:1%;">
+        </div>
+        <div class="card-block" >
+            <h4 class="card-title" style="text-align:center;">Successfully created your Google form!</h4>
+            <p class="card-text">
+            Click on the button below to get to the form. If you wish to access the form results, click on the button next to it.
+            </p>
+            <p class="card-text">
+            Your UUID is <%=uuid%>. We have also send you an email containing all this information.
+            </p>
+        </div>
+        <div class="card-footer">
+            <a href="<%=formlink%>" class="btn btn-sm btn-link">Go to form</a>
+            <a href="<%=dashboardlink%>" class="btn btn-sm btn-link">Check results</a>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+// switch to dark mode by os of user  
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.setAttribute('cds-theme', 'dark');
+    console.log('Currently in dark mode');
+}
+</script>
