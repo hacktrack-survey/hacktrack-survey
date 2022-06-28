@@ -36,13 +36,14 @@ function buildAndSendSurvey(req, res) {
       emailController.sendFormCreationMail(
         metaData,
         responseData.responderUri,
-        dbEntry.uuid
+        dbEntry.uuid,
+        "http://localhost:3001/api/form/" + dbEntry.uuid
       );
       res.render("successfullyCreatedSurvey", {
         post_url     : req.originalUrl,
         uuid         : dbEntry.uuid,
         formlink     : responseData.responderUri,
-        dashboardlink: "localhost:3001/api/form/" + dbEntry.uuid // TODO: Make address dynamic to not only include localhost!
+        dashboardlink: req.baseUrl+"/../api/form/" + dbEntry.uuid
       });
     });
 }
