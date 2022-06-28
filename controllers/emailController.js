@@ -8,7 +8,7 @@ function sendFormCreationMail(formMetaData, formUrl, formUuid) {
   emailForm.To = formMetaData.email;
   emailForm.TemplateModel.form_url = formUrl;
   emailForm.TemplateModel.hackathon_name = formMetaData.name;
-  emailForm.TemplateModel.hackathon_org = formMetaData.organizer;
+  emailForm.TemplateModel.hackathon_org = formMetaData.organizer[0];
   emailForm.TemplateModel.form_uuid = formUuid;
   mailClient.sendEmailWithTemplate(emailForm);
 }
