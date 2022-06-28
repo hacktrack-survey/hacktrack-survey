@@ -43,9 +43,9 @@
                 <form class="clr-form" action="<%= post_url%>" method = "POST">
                     <h3 id="disclaimer">Disclaimer</h3>
                     <div class="clr-form-control">
-                        <label for="example" class="clr-control-label"> Please take note that you will need some time to fill out this survey. 
+                        <label id="disclaimerText" for="example" class="clr-control-label">Please take note that you will need some time to fill out this survey. 
                             Your session will not be saved and will be lost when you close the browser window.
-                            We [HACKATHON_ORGANIZERS] hereby confirm that the survey responses we 
+                            We hereby confirm that the survey responses we 
                             share are anonymized data. Anonymized data refers to information that does not identify an 
                             individual and cannot reasonably be used to determine their identity. 
                             Anonymization requires the removal of the data subject’s name, address, and 
@@ -98,7 +98,7 @@
                                             <label id="organizers_label" for="example" class="clr-control-label">Name of organizer</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="text" id="example" placeholder="Max Mustermann" class="clr-input" name = "organizer[0]" required>
+                                                        <input type="text" onKeyUp="updateOrganizer(event)" id="example" placeholder="Max Mustermann" class="clr-input organizerInput" name = "organizer[0]" required>
                                                         <button type="button" onclick="remOrganizer(event)" class="btn btn-primary btn-sm">-</button>
                                                         <button type="button" onclick="addOrganizer(event)" class="btn btn-primary btn-sm">+</button>
                                                 </div>
@@ -116,7 +116,7 @@
                                             <label id="hackathonTheme" for="select-full" class="clr-control-label">Hackathon theme</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                    <input type="text" id="example" placeholder="What the Hack!" class="clr-input" name = "hackathonTheme" required>
+                                                    <input type="text" id="example" onKeyUp="updateHackathonTheme(event)" placeholder="What the Hack!" class="clr-input" name = "hackathonTheme" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -239,7 +239,7 @@
                                                         <li>Having fun</li>
                                                         <li>Making something cool / Working on an interesting project idea</li>
                                                         <li>Learning new tools or skills (Clary, understanding)</li>
-                                                        <li>[HACKATHON_THEME]</li>
+                                                        <li id="motivationHackTheme">...</li>
                                                         <li>Meeting new people</li>
                                                         <li>Seeing what others are working on</li>
                                                         <li>Sharing my experience and expertise</li>
@@ -659,8 +659,8 @@
                                                         <label for="socialCapital" class="clr-control-label"><h3>22. Social Capital</h3></label>
                                                         <ul class="list-unstyled">
                                                             <li>___________</li>
-                                                            <li>To what extent do you agree with the following statements about your relationship
-                                                                with [COMMUNITY_THAT_ORGANIZED_THE_EVENT]? (Strongly disagree, Somewhat disagree, Neither
+                                                            <li id="socialCapitalOrganizer">To what extent do you agree with the following statements about your relationship
+                                                                with ...? (Strongly disagree, Somewhat disagree, Neither
                                                                 agree nor disagree, Somewhat agree, Strongly agree)</li>
                                                             <ul class="list">
                                                                 <li>I feel I am part of this community. (bridging)</li>
@@ -1164,24 +1164,27 @@
     </div>
 </body>
     <script>
+
+
         let organizerCounter = 1;
 
         // switch to dark mode by os of user  
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.setAttribute('cds-theme', 'dark');
-            console.log('Currently in dark mode');
         }
               
         // add one Organizer
         function addOrganizer(event) {
-          var input = document.createElement("input");
-          input.placeholder="Max Mustermann";
-          input.setAttribute("type", "text");
-          input.className = "clr-input";
-          input.name = `organizer[${organizerCounter}]`;
-          document.getElementById("newOrganizer").appendChild(input);
+            updateOrganizer(null);
+            var input = document.createElement("input");
+            input.placeholder="Max Mustermann";
+            input.setAttribute("type", "text");
+            input.setAttribute("onKeyUp", "updateOrganizer(event)");
+            input.className = "clr-input organizerInput";
+            input.name = `organizer[${organizerCounter}]`;
+            document.getElementById("newOrganizer").appendChild(input);
 
-          organizerCounter++;
+            organizerCounter++;
         }
 
         // remove one Organizer
@@ -1190,8 +1193,38 @@
                 const res = document.getElementsByName(`organizer[${organizerCounter-1}]`);
                 res[0].parentNode.removeChild(res[0]);
                 organizerCounter--;
+                updateOrganizer(null);
             }
           
+        }
+
+        function updateOrganizer(event) {
+            const organizerFields = document.querySelectorAll('.organizerInput');
+            
+            let organizerList = [];
+            
+            for (let field of organizerFields) {
+                organizerList.push(field.value);
+            }
+
+            const disclaimer_text = document.getElementById("disclaimerText");
+            disclaimer_text.innerHTML = `Please take note that you will need some time to fill out this survey. Your session will not be saved and will be lost when you close 
+                the browser window. We <b>${organizerList.join(', ')}</b> hereby confirm that the survey responses we share are anonymized data. Anonymized data refers to
+                information that does not identify an individual and cannot reasonably be used to determine their identity.  Anonymization requires the removal of the data
+                subject’s name, address, and any other detail or combination of details that might support the identification of a data subject. Anonymized data does not identify
+                a person, so it is not considered personal data under GDPR. Any identifying information provided in this form will only be used to provide information about this
+                survey. It will remain confidential to the team of researchers at the University of Tartu (Estonia) who provide this service, and it will be deleted three months
+                after the survey was created. If you have any further questions about this service, please contact Alexander Nolte (alexander.nolte@ut.ee) at the University of
+                Tartu.`;
+
+            const socialCapitalOrganizer = document.getElementById("socialCapitalOrganizer");
+            socialCapitalOrganizer.innerHTML = `To what extent do you agree with the following statements about your relationship with ${organizerList.join(', ')}? (Strongly
+                disagree, Somewhat disagree, Neither agree nor disagree, Somewhat agree, Strongly agree)`;
+        }
+
+        function updateHackathonTheme(event) {
+            const motivationList = document.getElementById("motivationHackTheme");
+            motivationList.innerHTML = event.currentTarget.value;
         }
 
         // look if disclaimer is checked
