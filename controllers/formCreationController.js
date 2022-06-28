@@ -36,7 +36,8 @@ function buildAndSendSurvey(req, res) {
       emailController.sendFormCreationMail(
         metaData,
         responseData.responderUri,
-        dbEntry.uuid
+        dbEntry.uuid,
+        "http://localhost:3001/api/form/" + dbEntry.uuid
       );
       res.render("successfullyCreatedSurvey", {
         post_url     : req.originalUrl,

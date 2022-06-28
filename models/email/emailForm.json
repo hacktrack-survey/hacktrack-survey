@@ -5,7 +5,7 @@
     "hackathon_name": "hackathon_name_Value",
     "form_uuid": "form_url_Value",
     "form_url": "form_url_Value",
-    "dashboard_url": "http://localhost:3001/dashboard"
+    "dashboard_url": "dashboard_url_Value"
   },
   "InlineCss": true,
   "From": "hehexd@hehexd.xyz",
