@@ -43,7 +43,7 @@ function buildAndSendSurvey(req, res) {
         post_url     : req.originalUrl,
         uuid         : dbEntry.uuid,
         formlink     : responseData.responderUri,
-        dashboardlink: req.baseUrl+"/../api/form/" + dbEntry.uuid
+        dashboardlink: req.baseUrl+"/../api/form/" + dbEntry.uuid+"/responses"
       });
     });
 }
