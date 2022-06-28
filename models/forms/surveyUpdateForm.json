@@ -1070,7 +1070,7 @@
       "createItem": {
         "item": {
           "itemId": "300",
-          "title": "SocialCapital: To what extent do you agree with the following statements about your relationship with [COMMUNITY_THAT_ORGANIZED_THE_EVENT]?",
+          "title": "SocialCapital: To what extent do you agree with the following statements about your relationship with [HACKATHON_ORGANIZERS]?",
           "questionGroupItem": {
             "questions": [
               {

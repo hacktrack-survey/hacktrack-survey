@@ -1,3 +1,5 @@
+const { getOrganizers } = require("./metadataExtractor");
+
 function replacePlaceholders(survey, formBody) {
     const placeholders =
     [{
@@ -15,13 +17,13 @@ function replacePlaceholders(survey, formBody) {
         {
             organizer : {
                 placeholder: "\\[HACKATHON_ORGANIZERS\\]",
-                replaceWith: formBody.organizer
+                replaceWith: getOrganizers(formBody).join(', ')
             }
         },
         {
             organizer_name: {
                 placeholder: "\\[HACKATHON_ORGANIZER_NAME\\]",
-                replaceWith: formBody.contact
+                replaceWith: formBody.contactPerson
             }
         },
         {
@@ -41,7 +43,7 @@ function replacePlaceholders(survey, formBody) {
     let jsonString = JSON.stringify(survey);
 
     placeholders.forEach(ph => {
-        let regex = new RegExp(ph[Object.keys(ph)[0]].placeholder);
+        let regex = new RegExp(ph[Object.keys(ph)[0]].placeholder, "g");
         jsonString = jsonString.replace(regex, ph[Object.keys(ph)[0]].replaceWith);
     });
     

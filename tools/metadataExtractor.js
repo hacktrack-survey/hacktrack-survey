@@ -41,4 +41,4 @@ function evalCompetitive(value) {
   }
 }
 
-module.exports = { extractMetadata };
+module.exports = { extractMetadata, getOrganizers };
