@@ -42,7 +42,7 @@ function buildAndSendSurvey(req, res) {
         post_url     : req.originalUrl,
         uuid         : dbEntry.uuid,
         formlink     : responseData.responderUri,
-        dashboardlink: "localhost:3001/api/form/" + dbEntry.uuid // TODO: Make address dynamic to not only include localhost!
+        dashboardlink: req.baseUrl+"/../api/form/" + dbEntry.uuid
       });
     });
 }
