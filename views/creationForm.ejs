@@ -41,7 +41,7 @@
         <div class="content-container">
         <div class="content-area">
                 <form class="clr-form" action="<%= post_url%>" method = "POST">
-                    <h3 id="disclaimer">Disclaimer</h3>
+                    <h3 id="disclaimer">1. Disclaimer</h3>
                     <div class="clr-form-control">
                         <label id="disclaimerText" for="example" class="clr-control-label">Please take note that you will need some time to fill out this survey. 
                             Your session will not be saved and will be lost when you close the browser window.
@@ -215,9 +215,13 @@
                             </div>
                         </div>
                     </div>                   
-                    <p>Please mark all extra survey items 
+                    <br>
+                    <br>
+                    <h3>2. Please mark all extra survey items 
                         which should be included in the hackathon survey. 
-                        Required Items can not be changed!</p>
+                        Required Items can not be changed!</h3>
+                    <br>
+                        <button type="button"  onclick='selects()' class="btn btn-success">Select All</button>  <button type="button" onclick='deSelect()' class="btn btn-danger">Deselect All</button> 
                         <div class="clr-row">
                             <div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
                                 <div class="card">
@@ -971,7 +975,7 @@
                                                         <label for="education" class="clr-control-label"><h3>38. Education</h3></label>
                                                         <ul class="list-unstyled">
                                                             <li>___________</li>
-                                                            <li>>What is highest level of formal education that you have completed until now? (High school
+                                                            <li>What is highest level of formal education that you have completed until now? (High school
                                                                 diploma or GED, Some college, Associate and/or bachelor's degree, Bachelor's degree, Professional
                                                                 degree, Master's degree, Doctorate, Prefer not to say)</li>
                                                         </ul>
@@ -1238,6 +1242,24 @@
         function updateHackathonTheme(event) {
             const motivationList = document.getElementById("motivationHackTheme");
             motivationList.innerHTML = event.currentTarget.value;
+        }
+        
+        // Button to select all checkboxes for survey
+        function selects(){
+            var ele=document.getElementsByClassName('clr-checkbox');
+            for(var i=0;i<ele.length;i++){
+                if(ele[i].type=='checkbox')
+                ele[i].checked=true;
+            }
+        }
+
+        //Button to deselect all checkboxes for survey
+        function deSelect(){
+            var ele=document.getElementsByClassName('clr-checkbox');
+            for(var i=0;i<ele.length;i++){
+                if(ele[i].type=='checkbox')
+                ele[i].checked=false;
+            }
         }
 
         // look if disclaimer is checked
