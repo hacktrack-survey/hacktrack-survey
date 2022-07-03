@@ -57,6 +57,7 @@ async function getSurveyResponses(surveyFormId) {
 
 if (module === require.main) {
   createSurveyForm().catch(console.error);
+  getSurveyResponses().catch(console.error);
 }
 
 module.exports = { createSurveyForm, getSurveyResponses };
