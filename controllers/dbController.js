@@ -51,7 +51,7 @@ function addEntry(entry) {
 
 function getSurvey(uuid) {
   const surveys = surveyDB.surveys.filter((entry) => entry.uuid === uuid);
-  if (surveys === undefined) {
+  if (surveys === undefined || surveys.length === 0) {
     return {};
   }
   return surveys[0];
