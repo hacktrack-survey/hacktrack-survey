@@ -16,6 +16,8 @@ router.get("/form/:uuid/responses", function (req, res, next) {
       .getSurveyResponses(entry.formId)
       .then((formResponses) => {
         res.json(formResponses);
+      }).catch((error) => {
+        res.json({});
       });
   } catch (error) {
     res.json({});
