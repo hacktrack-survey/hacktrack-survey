@@ -1,17 +1,27 @@
-const postmark = require("postmark");
+const nodemailer = require("nodemailer");  // NEW
+const ejs=require('ejs');
 
-const emailForm = require("../models/email/emailForm.json"); //emailForm.json Template
 
-const mailClient = new postmark.ServerClient(process.env.MAIL_TOKEN); // Email Server Client
+let transporter = nodemailer.createTransport({
+  host:"smtp-relay.sendinblue.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: 'test@sixonenine.club',
+    pass: process.env.EMAIL_WP,
+  },
+});
 
 function sendFormCreationMail(formMetaData, formUrl, formUuid, dashboard_url) {
-  emailForm.To = formMetaData.email;
-  emailForm.TemplateModel.form_url = formUrl;
-  emailForm.TemplateModel.hackathon_name = formMetaData.name;
-  emailForm.TemplateModel.hackathon_org = formMetaData.organizer[0];
-  emailForm.TemplateModel.form_uuid = formUuid;
-  emailForm.TemplateModel.dashboard_url = dashboard_url;
-  mailClient.sendEmailWithTemplate(emailForm);
+  let subject = `${formMetaData.organizer[0]}, your Google Form is here!`;
+  ejs.renderFile("./views/email.ejs",{hackathon_name: formMetaData.name,hackathon_org:formMetaData.organizer[0],form_url:formUrl,dashboard_url:dashboard_url,form_uuid:formUuid},function (err,data) {
+  var mainOptions = {
+    from: '"Hackathon planning kit" <test@sixonenine.club>',
+    to: formMetaData.email,
+    subject: subject, // Subject line
+    html: data // html body
+  };
+  transporter.sendMail(mainOptions);});
 }
 
 module.exports = { sendFormCreationMail };
