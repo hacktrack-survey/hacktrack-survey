@@ -11,7 +11,7 @@ function replacePlaceholders(survey, formBody) {
         {
             hackathon_theme: {
                 placeholder: "\\[HACKATHON_THEME\\]",
-                replaceWith: "'" + formBody.theme + "'",
+                replaceWith: "'" + formBody.hackathonTheme + "'",
             }
         },
         {
