@@ -19,7 +19,7 @@
                 <span class="title">Creation Form For Surveys</span>
             </div>
             <div class="header-nav">
-                <a href="#senden" class="nav-link nav-text">Send</a>
+                <a href="#senden" class="nav-link nav-text">Create Form!</a>
             </div>
         </header>
         <nav class="subnav">
@@ -71,7 +71,7 @@
                         <div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h2 id="informationAboutTheHackathon">Information about the hackathon</h2>
+                                    <h2 id="informationAboutTheHackathon">Information about the hackathon*</h2>
                                 </div>
                                 <div class="card-block">
                                     <div class="card-title">
@@ -208,18 +208,20 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                            </div>
+                                             </div>   
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>                   
+                    <p>* Required</p>
                     <br>
                     <br>
                     <h3 id="survey">2. Please mark all extra survey items 
                         which should be included in the hackathon survey. 
                         Required Items can not be changed!</h3>
+                        <p>Survey items that are marked with * are required items.</p>
                     <br>
                         <button type="button"  onclick='selects()' class="btn btn-success">Select All</button>  <button type="button" onclick='deSelect()' class="btn btn-danger">Deselect All</button> 
                         <div class="clr-row">
@@ -233,7 +235,7 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <h3 id="motivation" for="example" class="clr-control-label">1. Motivation(required)</h3>
+                                                <h3 id="motivation" for="example" class="clr-control-label">1. Motivation*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Why did people participate in the hackathon? (Not at all, To some extent, To a moderate
@@ -256,7 +258,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="motivationOther" for="example" class="clr-control-label">2. Motivation Other(required)</h3>
+                                                <h3 id="motivationOther" for="example" class="clr-control-label">2. Motivation Other*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>If your participation is motivated by other than the above reasons, please describe
@@ -264,7 +266,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="eventparticipation" for="example" class="clr-control-label">3. Event Participation(required)</h3>
+                                                <h3 id="eventparticipation" for="example" class="clr-control-label">3. Event Participation*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>In how many similar events have you participated in the past? (number entry)</li>
@@ -286,21 +288,21 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <h3 id="teamId" for="example" class="clr-control-label">4. Team Id(required)</h3>
+                                                <h3 id="teamId" for="example" class="clr-control-label">4. Team Id*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>What was the name of your team / project? (text entry)</li>
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="teamSize" for="example" class="clr-control-label">5. Team Size(required)</h3>
+                                                <h3 id="teamSize" for="example" class="clr-control-label">5. Team Size*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>How many people were in your team (including yourself)? (number entry)</li>
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="codeRepo" for="example" class="clr-control-label">6. Code Repo(required)</h3>
+                                                <h3 id="codeRepo" for="example" class="clr-control-label">6. Code Repo*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Did your team use a code repository? If yes, please provide the URL of that repository
@@ -308,7 +310,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="resourcesUrl" for="example" class="clr-control-label">7. Resources URL(required)</h3>
+                                                <h3 id="resourcesUrl" for="example" class="clr-control-label">7. Resources URL*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Did your team use any other online resources to e.g. create documentation? If yes,
@@ -316,7 +318,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="teamLeader" for="example" class="clr-control-label">8. Team Leader(required)</h3>
+                                                <h3 id="teamLeader" for="example" class="clr-control-label">8. Team Leader*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Was there a team leader? (A team leader is someone who provides guidance,
@@ -371,7 +373,7 @@
                                                 </div>
                                             </div>
                                             <div class="clr-form-control">
-                                                        <h3 id="teamFamiliarity" for="example" class="clr-control-label">11. Team Familiarity(required)</h3>
+                                                        <h3 id="teamFamiliarity" for="example" class="clr-control-label">11. Team Familiarity*</h3>
                                                         <ul class="list-unstyled">
                                                             <li>___________</li>
                                                             <li>How well do you know your team members? (Strongly disagree, Somewhat
@@ -403,7 +405,7 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <h3 id="satisfactionWithProcess" for="example" class="clr-control-label">12. Satisfaction With Process(required)</h3>
+                                                <h3 id="satisfactionWithProcess" for="example" class="clr-control-label">12. Satisfaction With Process*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Would you describe your team process as more...</li>
@@ -419,7 +421,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="goalClarity" for="example" class="clr-control-label">13. Goal Clarity(required)</h3>
+                                                <h3 id="goalClarity" for="example" class="clr-control-label">13. Goal Clarity*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Please indicate your level of agreement with the following statements related to your
@@ -436,7 +438,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="voice" for="example" class="clr-control-label">14. Voice(required)</h3>
+                                                <h3 id="voice" for="example" class="clr-control-label">14. Voice*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Please indicate your level of agreement with the following statements about your TEAM.
@@ -468,7 +470,7 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <h3 id="satisfactionWithOutcome" for="example" class="clr-control-label">15. Satisfaction With Outcome(required)</h3>
+                                                <h3 id="satisfactionWithOutcome" for="example" class="clr-control-label">15. Satisfaction With Outcome*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Please indicate your level of agreement with the following statements
@@ -952,7 +954,7 @@
                                         </div>
                                         <div class="card-text">
                                             <div class="clr-form-control">
-                                                <h3 id="age" for="example" class="clr-control-label">36. Age(required)</h3>
+                                                <h3 id="age" for="example" class="clr-control-label">36. Age*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>How old are you currently? (18 to 24, 25 to 34, 35 to 44, 45 to 54, 55 to 64, 65 to 74, 75 or older,
@@ -960,7 +962,7 @@
                                                 </ul>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="gender" for="example" class="clr-control-label">37. Gender(required)</h3>
+                                                <h3 id="gender" for="example" class="clr-control-label">37. Gender*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Are you…? (Female, Male, Non-binary, Prefer not to say)</li>
@@ -983,7 +985,7 @@
                                                 </div>
                                             </div>
                                             <div class="clr-form-control">
-                                                <h3 id="minority" for="example" class="clr-control-label">39. Minority(required)</h3>
+                                                <h3 id="minority" for="example" class="clr-control-label">39. Minority*</h3>
                                                 <ul class="list-unstyled">
                                                     <li>___________</li>
                                                     <li>Do you consider yourself a minority? (For example in terms of race, gender, expertise or in
@@ -1044,7 +1046,7 @@
                             </li>
                         </ol>
                     <p>Agree to the terms of use to create Form!</p>
-                <button id="senden" type = "submit" class="btn btn-primary">Send</button>
+                <button id="senden" type = "submit" class="btn btn-primary">Create Form!</button>
                 </form>
             </div>
             <nav class="sidenav">
@@ -1078,20 +1080,20 @@
                         <input id="tabexample2" type="checkbox">
                         <label for="tabexample2">Individual measures</label>
                         <ul class="nav-list">
-                            <li><a href="#motivation" class="nav-link">1. Motivation(required)</a>
-                            <li><a href="#motivationOther"class="nav-link">2. Motivation Other(required)</a></li>
-                            <li><a href="#eventparticipation"class="nav-link">3. Event Participation(required)</a></li>
+                            <li><a href="#motivation" class="nav-link">1. Motivation*</a>
+                            <li><a href="#motivationOther"class="nav-link">2. Motivation Other*</a></li>
+                            <li><a href="#eventparticipation"class="nav-link">3. Event Participation*</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
                         <input id="tabexample3" type="checkbox">
                         <label for="tabexample3">Team composition</label>
                         <ul class="nav-list">
-                            <li><a href="#teamId"class="nav-link">4. Team Id(required)</a></li>
-                            <li><a href="#teamSize"class="nav-link">5. Team Size(required)</a></li>
-                            <li><a href="#codeRepo"class="nav-link">6. Code Repo(required)</a></li>
-                            <li><a href="#resourcesUrl"class="nav-link">7. Resources URL(required)</a></li>
-                            <li><a href="#teamLeader" class="nav-link">8. Team Leader(required)</a></li>
+                            <li><a href="#teamId"class="nav-link">4. Team Id*</a></li>
+                            <li><a href="#teamSize"class="nav-link">5. Team Size*</a></li>
+                            <li><a href="#codeRepo"class="nav-link">6. Code Repo*</a></li>
+                            <li><a href="#resourcesUrl"class="nav-link">7. Resources URL*</a></li>
+                            <li><a href="#teamLeader" class="nav-link">8. Team Leader*</a></li>
                             <li><a href="#teamManager"class="nav-link">9. Team Manager</a></li>
                             <li><a href="#socialLeader"class="nav-link">10. Social Leader</a></li>
                             <li><a href="#teamFamiliarity"class="nav-link">11. Team Familiarity</a></li>
@@ -1101,16 +1103,16 @@
                         <input id="tabexample4" type="checkbox">
                         <label for="tabexample4">Team process</label>
                         <ul class="nav-list">
-                            <li><a href="#satisfactionWithProcess" class="nav-link">12. Satisfaction With Process(required)</a>
-                            <li><a href="#goalClarity" class="nav-link">13. Goal Clarity(required)</a></li>
-                            <li><a href="#voice" class="nav-link">14. Voice(required)</a></li>
+                            <li><a href="#satisfactionWithProcess" class="nav-link">12. Satisfaction With Process*</a>
+                            <li><a href="#goalClarity" class="nav-link">13. Goal Clarity*</a></li>
+                            <li><a href="#voice" class="nav-link">14. Voice*</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
                         <input id="tabexample5" type="checkbox">
                         <label for="tabexample5">Project measures</label>
                         <ul class="nav-list">
-                            <li><a href="#satisfactionWithOutcome" class="nav-link">15. Satisfaction With Outcome(required)</a>
+                            <li><a href="#satisfactionWithOutcome" class="nav-link">15. Satisfaction With Outcome*</a>
                             <li><a href="#perceivedUsefulness"class="nav-link">16. Perceived Usefulness</a></li>
                             <li><a href="#continuationIntentions"class="nav-link">17. Continuation Intentions</a></li>
                             <li><a href="#behavioralControl"class="nav-link">18. Behavioral Control</a></li>
@@ -1162,10 +1164,10 @@
                         <input id="tabexample10" type="checkbox">
                         <label for="tabexample10">Demographics and individual background</label>
                         <ul class="nav-list">
-                            <li><a href="#age" class="nav-link">36. Age(required)</a>
-                            <li><a href="#gender"class="nav-link">37. Gender(required)</a></li>
+                            <li><a href="#age" class="nav-link">36. Age*</a>
+                            <li><a href="#gender"class="nav-link">37. Gender*</a></li>
                             <li><a href="#education"class="nav-link">38. Education</a></li>
-                            <li><a href="#minority"class="nav-link">39. Minority(required)</a></li>
+                            <li><a href="#minority"class="nav-link">39. Minority*</a></li>
                         </ul>
                     </section>
                     <section class="nav-group collapsible">
