@@ -65,70 +65,70 @@
             "questions": [
               {
                 "questionId": "11",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Having fun"
                 }
               },
               {
                 "questionId": "12",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Making something cool / Working on an interesting project idea"
                 }
               },
               {
                 "questionId": "13",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Learning new tools or skills (Clary, understanding)"
                 }
               },
               {
                 "questionId": "14",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "[HACKATHON_THEME]"
                 }
               },
               {
                 "questionId": "15",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Meeting new people"
                 }
               },
               {
                 "questionId": "16",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Seeing what others are working on"
                 }
               },
               {
                 "questionId": "17",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Sharing my experience and expertise"
                 }
               },
               {
                 "questionId": "18",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Joining friends that participate (Clary, social)"
                 }
               },
               {
                 "questionId": "19",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Dedicated time to get work done"
                 }
               },
               {
                 "questionId": "110",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Win a prize"
                 }
@@ -161,7 +161,7 @@
           "questionItem": {
             "question": {
               "questionId": "21",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -181,7 +181,7 @@
           "questionItem": {
             "question": {
               "questionId": "31",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -213,7 +213,7 @@
           "questionItem": {
             "question": {
               "questionId": "51",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -233,7 +233,7 @@
           "questionItem": {
             "question": {
               "questionId": "61",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -253,7 +253,7 @@
           "questionItem": {
             "question": {
               "questionId": "71",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -273,7 +273,7 @@
           "questionItem": {
             "question": {
               "questionId": "81",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -293,7 +293,7 @@
           "questionItem": {
             "question": {
               "questionId": "91",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -371,28 +371,28 @@
             "questions": [
               {
                 "questionId": "121",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I knew my team members well."
                 }
               },
               {
                 "questionId": "122",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I have collaborated with some of my team members before."
                 }
               },
               {
                 "questionId": "123",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I have been close to some of my team members before."
                 }
               },
               {
                 "questionId": "124",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I have socialized with some of my team members (outside of this hackathon) before."
                 }
@@ -439,7 +439,7 @@
             "question": 
               {
                 "questionId": "141",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -467,7 +467,7 @@
             "question": 
               {
                 "questionId": "151",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -495,7 +495,7 @@
             "question": 
               {
                 "questionId": "161",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -523,7 +523,7 @@
             "question": 
               {
                 "questionId": "171",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -551,21 +551,21 @@
             "questions": [
               {
                 "questionId": "181",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I was uncertain of my duties and responsibilities in this team."
                 }
               },
               {
                 "questionId": "182",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I was unclear about the goals and objectives for my work in this team."
                 }
               },
               {
                 "questionId": "183",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I was unsure how my work relates to the overall objectives of my team."
                 }
@@ -599,28 +599,28 @@
             "questions": [
               {
                 "questionId": "191",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Everyone had a chance to express his/her opinion."
                 }
               },
               {
                 "questionId": "192",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "The team members responded to the comments made by others."
                 }
               },
               {
                 "questionId": "193",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "The team members participated very actively during the project."
                 }
               },
               {
                 "questionId": "194",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Overall, the participation of each member in the team was effective."
                 }
@@ -666,28 +666,28 @@
             "questions": [
               {
                 "questionId": "211",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I am satisfied with the work completed in my project."
                 }
               },
               {
                 "questionId": "212",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I am satisfied with the quality of my team's output."
                 }
               },
               {
                 "questionId": "213",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "My ideal outcome coming into my project achieved."
                 }
               },
               {
                 "questionId": "214",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "My expectations towards my team were met."
                 }
@@ -1778,7 +1778,7 @@
           "questionItem": {
             "question":{
               "questionId": "491",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -1808,7 +1808,7 @@
           "questionItem": {
             "question": {
               "questionId": "511",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -1863,7 +1863,7 @@
           "questionItem": {
             "question": {
               "questionId": "531",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
