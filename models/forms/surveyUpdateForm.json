@@ -60,75 +60,75 @@
       "createItem": {
         "item": {
           "itemId": "10",
-          "title": "Motivation: Why did people participate in the hackathon?",
+          "title": "Why did people participate in the hackathon?",
           "questionGroupItem": {
             "questions": [
               {
                 "questionId": "11",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Having fun"
                 }
               },
               {
                 "questionId": "12",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Making something cool / Working on an interesting project idea"
                 }
               },
               {
                 "questionId": "13",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Learning new tools or skills (Clary, understanding)"
                 }
               },
               {
                 "questionId": "14",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "[HACKATHON_THEME]"
                 }
               },
               {
                 "questionId": "15",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Meeting new people"
                 }
               },
               {
                 "questionId": "16",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Seeing what others are working on"
                 }
               },
               {
                 "questionId": "17",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Sharing my experience and expertise"
                 }
               },
               {
                 "questionId": "18",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Joining friends that participate (Clary, social)"
                 }
               },
               {
                 "questionId": "19",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Dedicated time to get work done"
                 }
               },
               {
                 "questionId": "110",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Win a prize"
                 }
@@ -157,11 +157,11 @@
       "createItem": {
         "item": {
           "itemId": "20",
-          "title": "MotivationOther: If your participation is motivated by other than the above reasons, please describe additional motivations below.",
+          "title": "If your participation is motivated by other than the above reasons, please describe additional motivations below.",
           "questionItem": {
             "question": {
               "questionId": "21",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -177,11 +177,11 @@
       "createItem": {
         "item": {
           "itemId": "30",
-          "title": "EventParticipation: In how many similar events have you participated in the past?",
+          "title": "In how many similar events have you participated in the past?",
           "questionItem": {
             "question": {
               "questionId": "31",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -209,11 +209,11 @@
       "createItem": {
         "item": {
           "itemId": "50",
-          "title": "TeamId: What was the name of your team/project?",
+          "title": "What was the name of your team/project?",
           "questionItem": {
             "question": {
               "questionId": "51",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -229,11 +229,11 @@
       "createItem": {
         "item": {
           "itemId": "60",
-          "title": "TeamSize: How many people were in your team (including yourself)?",
+          "title": "How many people were in your team (including yourself)?",
           "questionItem": {
             "question": {
               "questionId": "61",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -249,11 +249,11 @@
       "createItem": {
         "item": {
           "itemId": "70",
-          "title":  "CodeRepo: Did your team use a code repository? If yes, please provide the URL of that repository below.",
+          "title":  "Did your team use a code repository? If yes, please provide the URL of that repository below.",
           "questionItem": {
             "question": {
               "questionId": "71",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -269,11 +269,11 @@
       "createItem": {
         "item": {
           "itemId": "80",
-          "title": "ResourceURL: Did your team use any other online resources to e.g. create documentation? If yes, please provide the URL of that resource below.",
+          "title": "Did your team use any other online resources to e.g. create documentation? If yes, please provide the URL of that resource below.",
           "questionItem": {
             "question": {
               "questionId": "81",
-              "required": true,
+              "required": false,
               "textQuestion": {
                 "paragraph": true
               }
@@ -289,11 +289,11 @@
       "createItem": {
         "item": {
           "itemId": "90",
-          "title": "TeamLeader: Was there a team leader? (A team leader is someone who provides guidance, instruction, direction and leadership to the team.)",
+          "title": "Was there a team leader? (A team leader is someone who provides guidance, instruction, direction and leadership to the team.)",
           "questionItem": {
             "question": {
               "questionId": "91",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -314,7 +314,7 @@
       "createItem": {
         "item": {
           "itemId": "100",
-          "title": "TeamManager: Was there a project manager? (A project manager is someone who keeps track the team's progress and coordinates the actions of team members.)",
+          "title": "Was there a project manager? (A project manager is someone who keeps track the team's progress and coordinates the actions of team members.)",
           "questionItem": {
             "question": {
               "questionId": "101",
@@ -340,7 +340,7 @@
       "createItem": {
         "item": {
           "itemId": "110",
-          "title": "SocialLeader: Was there a social-emotional leader? (A social-emotional leader is someone who alleviates the frustration, disappointments and hostilities which arise in the team.)",
+          "title": "Was there a social-emotional leader? (A social-emotional leader is someone who alleviates the frustration, disappointments and hostilities which arise in the team.)",
           "questionItem": {
             "question": {
               "questionId": "111",
@@ -366,33 +366,33 @@
       "createItem": {
         "item": {
           "itemId": "120",
-          "title": "TeamFamiliarity: How well do you know your team members?",
+          "title": "How well do you know your team members?",
           "questionGroupItem": {
             "questions": [
               {
                 "questionId": "121",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I knew my team members well."
                 }
               },
               {
                 "questionId": "122",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I have collaborated with some of my team members before."
                 }
               },
               {
                 "questionId": "123",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I have been close to some of my team members before."
                 }
               },
               {
                 "questionId": "124",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I have socialized with some of my team members (outside of this hackathon) before."
                 }
@@ -434,12 +434,12 @@
       "createItem": {
         "item": {
           "itemId": "140",
-          "title": "SatisfactionWithProcess: Would you describe your team process as more... ",
+          "title": "Would you describe your team process as more... ",
           "questionItem": {
             "question": 
               {
                 "questionId": "141",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -462,12 +462,12 @@
       "createItem": {
         "item": {
           "itemId": "150",
-          "title": "SatisfactionWithProcess: Would you describe your team process as more... ",
+          "title": "Would you describe your team process as more... ",
           "questionItem": {
             "question": 
               {
                 "questionId": "151",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -490,12 +490,12 @@
       "createItem": {
         "item": {
           "itemId": "160",
-          "title": "SatisfactionWithProcess: Would you describe your team process as more... ",
+          "title": "Would you describe your team process as more... ",
           "questionItem": {
             "question": 
               {
                 "questionId": "161",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -518,12 +518,12 @@
       "createItem": {
         "item": {
           "itemId": "170",
-          "title": "SatisfactionWithProcess: Would you describe your team process as more... ",
+          "title": "Would you describe your team process as more... ",
           "questionItem": {
             "question": 
               {
                 "questionId": "171",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -546,26 +546,26 @@
       "createItem": {
         "item": {
           "itemId": "180",
-          "title": "GoalClarity: Please indicate your level of agreement with the following statements related to your GOALS as a team.",
+          "title": "Please indicate your level of agreement with the following statements related to your GOALS as a team.",
           "questionGroupItem": {
             "questions": [
               {
                 "questionId": "181",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I was uncertain of my duties and responsibilities in this team."
                 }
               },
               {
                 "questionId": "182",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I was unclear about the goals and objectives for my work in this team."
                 }
               },
               {
                 "questionId": "183",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I was unsure how my work relates to the overall objectives of my team."
                 }
@@ -594,33 +594,33 @@
       "createItem": {
         "item": {
           "itemId": "190",
-          "title": " Voice: Please indicate your level of agreement with the following statements about your TEAM.",
+          "title": "Please indicate your level of agreement with the following statements about your TEAM.",
           "questionGroupItem": {
             "questions": [
               {
                 "questionId": "191",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Everyone had a chance to express his/her opinion."
                 }
               },
               {
                 "questionId": "192",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "The team members responded to the comments made by others."
                 }
               },
               {
                 "questionId": "193",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "The team members participated very actively during the project."
                 }
               },
               {
                 "questionId": "194",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "Overall, the participation of each member in the team was effective."
                 }
@@ -661,33 +661,33 @@
       "createItem": {
         "item": {
           "itemId": "210",
-          "title": "SatisfactionWithOutcome: Please indicate your level of agreement with the following statements related to your SATISFACTION with your project.",
+          "title": "Please indicate your level of agreement with the following statements related to your SATISFACTION with your project.",
           "questionGroupItem": {
             "questions": [
               {
                 "questionId": "211",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I am satisfied with the work completed in my project."
                 }
               },
               {
                 "questionId": "212",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "I am satisfied with the quality of my team's output."
                 }
               },
               {
                 "questionId": "213",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "My ideal outcome coming into my project achieved."
                 }
               },
               {
                 "questionId": "214",
-                "required": true,
+                "required": false,
                 "rowQuestion": {
                     "title": "My expectations towards my team were met."
                 }
@@ -716,7 +716,7 @@
       "createItem": {
         "item": {
           "itemId": "220",
-          "title": "PerceivedUsefulness: Please indicate your level of agreement with the following statements related to the USEFULNESS of your project.",
+          "title": "Please indicate your level of agreement with the following statements related to the USEFULNESS of your project.",
           "questionGroupItem": {
             "questions": [
               {
@@ -771,7 +771,7 @@
       "createItem": {
         "item": {
           "itemId": "230",
-          "title": "ContinuationIntentions: Please indicate your FUTURE INTENTIONS related to your hackathon project.",
+          "title": "Please indicate your FUTURE INTENTIONS related to your hackathon project.",
           "questionGroupItem": {
             "questions": [
               {
@@ -819,7 +819,7 @@
       "createItem": {
         "item": {
           "itemId": "240",
-          "title": "BehavioralControl: Please indicate your level of agreement with the following statements related to your ABILITY to continue working on your hackathon project.",
+          "title": "Please indicate your level of agreement with the following statements related to your ABILITY to continue working on your hackathon project.",
           "questionGroupItem": {
             "questions": [
               {
@@ -879,7 +879,7 @@
       "createItem": {
         "item": {
           "itemId": "260",
-          "title": "MentoringExperience: To what extent do you agree with the following statements about THE SUPPORT THE MENTORS PROVIDED during this hackathon",
+          "title": "To what extent do you agree with the following statements about THE SUPPORT THE MENTORS PROVIDED during this hackathon",
           "questionGroupItem": {
             "questions": [
               {
@@ -969,7 +969,7 @@
       "createItem": {
         "item": {
           "itemId": "270",
-          "title": "MentoringOther: What could the MENTORS have done to improve your experience during the hackathon? ",
+          "title": "What could the MENTORS have done to improve your experience during the hackathon? ",
           "questionItem": {
             "question": {
               "questionId": "271",
@@ -1001,7 +1001,7 @@
       "createItem": {
         "item": {
           "itemId": "290",
-          "title": "CommunityIdentification: Do people identify with the community?",
+          "title": "Do people identify with the community?",
           "questionGroupItem": {
             "questions": [
               {
@@ -1070,7 +1070,7 @@
       "createItem": {
         "item": {
           "itemId": "300",
-          "title": "SocialCapital: To what extent do you agree with the following statements about your relationship with [HACKATHON_ORGANIZERS]?",
+          "title": "To what extent do you agree with the following statements about your relationship with [HACKATHON_ORGANIZERS]?",
           "questionGroupItem": {
             "questions": [
               {
@@ -1179,7 +1179,7 @@
       "createItem": {
         "item": {
           "itemId": "320",
-          "title": "SatisfactionWithHackathon: How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
+          "title": "How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
           "questionItem": {
             "question": {
               "questionId": "321",
@@ -1206,7 +1206,7 @@
       "createItem": {
         "item": {
           "itemId": "330",
-          "title": "SatisfactionWithHackathon: How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
+          "title": "How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
           "questionItem": {
             "question": {
               "questionId": "331",
@@ -1233,7 +1233,7 @@
       "createItem": {
         "item": {
           "itemId": "340",
-          "title": "SatisfactionWithHackathon: How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
+          "title": "How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
           "questionItem": {
             "question": {
               "questionId": "341",
@@ -1260,7 +1260,7 @@
       "createItem": {
         "item": {
           "itemId": "350",
-          "title": "SatisfactionWithHackathon: How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
+          "title": "How do you feel about your OVERALL EXPERIENCE participating in this hackathon?",
           "questionItem": {
             "question":{
               "questionId": "351",
@@ -1287,7 +1287,7 @@
       "createItem": {
         "item": {
           "itemId": "360",
-          "title": "FutureParticipationIntentions: Do you plan to participate in a similar event in the future?",
+          "title": "Do you plan to participate in a similar event in the future?",
           "questionItem": {
             "question": {
               "questionId": "361",
@@ -1314,7 +1314,7 @@
       "createItem": {
         "item": {
           "itemId": "370",
-          "title": "RecommendationLikeliness: How likely would you recommend a similar hackathon to a friend or colleague?",
+          "title": "How likely would you recommend a similar hackathon to a friend or colleague?",
           "questionItem": {
             "question": {
               "questionId": "371",
@@ -1347,7 +1347,7 @@
       "createItem": {
         "item": {
           "itemId": "380",
-          "title": "SessionSatisfaction: Please rate how SATISFIED you were with the following sessions.",
+          "title": "Please rate how SATISFIED you were with the following sessions.",
           "questionGroupItem": {
             "questions": [
               {
@@ -1395,7 +1395,7 @@
       "createItem": {
         "item": {
           "itemId": "390",
-          "title": "SessionUsefulness: Please rate how USEFUL you found the following sessions.",
+          "title": "Please rate how USEFUL you found the following sessions.",
           "questionGroupItem": {
             "questions": [
               {
@@ -1443,7 +1443,7 @@
       "createItem": {
         "item": {
           "itemId": "400",
-          "title": "SessionEnjoyment: Please rate how ENJOYABLE you found the following sessions.",
+          "title": "Please rate how ENJOYABLE you found the following sessions.",
           "questionGroupItem": {
             "questions": [
               {
@@ -1491,7 +1491,7 @@
       "createItem": {
         "item": {
           "itemId": "410",
-          "title": "GoodEvent: In your opinion, what was good about the event?",
+          "title": "In your opinion, what was good about the event?",
           "questionItem": {
             "question": {
               "questionId": "411",
@@ -1511,7 +1511,7 @@
       "createItem": {
         "item": {
           "itemId": "420",
-          "title": "ImproveEvent: How could the event be improved?",
+          "title": "How could the event be improved?",
           "questionItem": {
             "question": {
               "questionId": "421",
@@ -1531,7 +1531,7 @@
       "createItem": {
         "item": {
           "itemId": "430",
-          "title": "OpenSharing: Is there anything else you would like to share with the organizers?",
+          "title": "Is there anything else you would like to share with the organizers?",
           "questionItem": {
             "question": {
               "questionId": "431",
@@ -1563,7 +1563,7 @@
       "createItem": {
         "item": {
           "itemId": "450",
-          "title": "ProgrammingExperienceYears: How many years of programming experience do you have?",
+          "title": "How many years of programming experience do you have?",
           "questionItem": {
             "question": {
               "questionId": "451",
@@ -1583,7 +1583,7 @@
       "createItem": {
         "item": {
           "itemId": "460",
-          "title": "ProgrammingExperienceComparison: Referring back to the people you collaborated with at this hackathon, how do you estimate your programming experience compared to them?",
+          "title": "Referring back to the people you collaborated with at this hackathon, how do you estimate your programming experience compared to them?",
           "questionItem": {
             "question": {
               "questionId": "461",
@@ -1610,7 +1610,7 @@
       "createItem": {
         "item": {
           "itemId": "470",
-          "title": "ProgrammingAbility: To what extend do you agree with the following statements about your ABILITY to use these technologies?",
+          "title": "To what extend do you agree with the following statements about your ABILITY to use these technologies?",
           "questionGroupItem": {
             "questions": [
               {
@@ -1686,7 +1686,7 @@
       "createItem": {
         "item": {
           "itemId": "480",
-          "title": "ProgrammingComfort: To what extend do you agree with the following statements about your LEVEL OF COMFORT using these technologies?",
+          "title": "To what extend do you agree with the following statements about your LEVEL OF COMFORT using these technologies?",
           "questionGroupItem": {
             "questions": [
               {
@@ -1774,11 +1774,11 @@
       "createItem": {
         "item": {
           "itemId": "490",
-          "title": "Age: How old are you currently?",
+          "title": "How old are you currently?",
           "questionItem": {
             "question":{
               "questionId": "491",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -1804,11 +1804,11 @@
       "createItem": {
         "item": {
           "itemId": "510",
-          "title": "Gender: Are you…?",
+          "title": "Are you…?",
           "questionItem": {
             "question": {
               "questionId": "511",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
@@ -1830,7 +1830,7 @@
       "createItem": {
         "item": {
           "itemId": "520",
-          "title": "Education: What is highest level of formal education that you have completed until now?",
+          "title": "What is highest level of formal education that you have completed until now?",
           "questionItem": {
             "question": {
               "questionId": "521",
@@ -1859,11 +1859,11 @@
       "createItem": {
         "item": {
           "itemId": "530",
-          "title": "Minority: Do you consider yourself a minority? (For example in terms of race, gender, expertise or in another way)",
+          "title": "Do you consider yourself a minority? (For example in terms of race, gender, expertise or in another way)",
           "questionItem": {
             "question": {
               "questionId": "531",
-                "required": true,
+                "required": false,
                 "choiceQuestion": {
                   "type": "RADIO",
                   "options": [
