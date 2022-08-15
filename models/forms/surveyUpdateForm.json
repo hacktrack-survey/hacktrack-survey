@@ -213,7 +213,7 @@
           "questionItem": {
             "question": {
               "questionId": "51",
-              "required": false,
+              "required": true,
               "textQuestion": {
                 "paragraph": true
               }
