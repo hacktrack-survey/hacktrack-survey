@@ -8,6 +8,7 @@
     <link href="https://unpkg.com/@cds/city/css/bundles/default.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/@clr/ui/clr-ui.min.css" rel="stylesheet"/>
     <link href="https://unpkg.com/@cds/core/styles/shim.clr-ui.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Hackathon Creation Form For Surveys</title>
 </head>
 <body cds-text="body" cds-theme="">
@@ -81,7 +82,7 @@
                                             <label id="nameHackathon" for="example" class="clr-control-label">Name of Hackathon</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="text" id="example" placeholder="Awesome Hackathon" class="clr-input" name = "nameHackathon" required>
+                                                        <input type="text" id="namhack" placeholder="Awesome Hackathon" class="clr-input" name = "nameHackathon" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,7 +90,7 @@
                                             <label id="surveyPurpose" for="select-full" class="clr-control-label">Survey purpose</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                    <input type="text" id="example" placeholder="Survey Purpose" class="clr-input" name = "surveyPurpose" required>
+                                                    <input type="text" id="surveyPurp" placeholder="Survey Purpose" class="clr-input" name = "surveyPurpose" required>
                                                 </div>
                                                 <span class="clr-subtext">Select one option.</span>
                                             </div>
@@ -98,7 +99,7 @@
                                             <label id="organizers_label" for="example" class="clr-control-label">Name of organizer</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="text" onKeyUp="updateOrganizer(event)" id="example" placeholder="Max Mustermann" class="clr-input organizerInput" name = "organizer[0]" required>
+                                                        <input type="text" onKeyUp="updateOrganizer(event)" id="orgi" placeholder="Max Mustermann" class="clr-input organizerInput" name = "organizer[0]" required>
                                                         <button type="button" onclick="remOrganizer(event)" class="btn btn-primary btn-sm">-</button>
                                                         <button type="button" onclick="addOrganizer(event)" class="btn btn-primary btn-sm">+</button>
                                                 </div>
@@ -108,7 +109,7 @@
                                             <label id="contactPerson" for="select-full" class="clr-control-label">Contact person</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                    <input type="text" id="example" placeholder="Anna Bauer" class="clr-input" name = "contactPerson" required>
+                                                    <input type="text" id="conper" placeholder="Anna Bauer" class="clr-input" name = "contactPerson" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +117,7 @@
                                             <label id="hackathonTheme" for="select-full" class="clr-control-label">Hackathon theme</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                    <input type="text" id="example" onKeyUp="updateHackathonTheme(event)" placeholder="What the Hack!" class="clr-input" name = "hackathonTheme" required>
+                                                    <input type="text" id="hackth" onKeyUp="updateHackathonTheme(event)" placeholder="What the Hack!" class="clr-input" name = "hackathonTheme" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,7 +125,7 @@
                                             <label id="emailOrganizer" for="example" class="clr-control-label">Email of organizer</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="email" id="example" placeholder="max.mustermann@uni-due.de" class="clr-input" name = "emailOrganizer" required/>
+                                                        <input type="email" id="em" placeholder="max.mustermann@uni-due.de" class="clr-input" name = "emailOrganizer" required/>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,7 +139,7 @@
                                             <label id="urlEvent" for="example" class="clr-control-label">Url of event</label>
                                             <div class="clr-control-container">
                                                 <div class="clr-input-wrapper">
-                                                        <input type="url" id="example" placeholder="https://www.hackathon.de" class="clr-input" name = "urlEvent" required/>
+                                                        <input type="url" id="ur" placeholder="https://www.hackathon.de" class="clr-input" name = "urlEvent" required/>
                                                 </div>
                                             </div>
                                         </div>
@@ -1046,7 +1047,9 @@
                             </li>
                         </ol>
                     <p>Agree to the terms of use to create Form!</p>
-                <button id="senden" type = "submit" class="btn btn-primary">Create Form!</button>
+                <button id="senden" type = "submit" class="btn btn-primary" onclick="spinner()">Create Form!</button>
+                    <div id="cover-spin">
+                    </div>
                 </form>
             </div>
             <nav class="sidenav">
@@ -1182,6 +1185,41 @@
         </div>
     </div>
 </body>
+    <style>
+        #cover-spin {
+            position:fixed;
+            width:100%;
+            left:0;right:0;top:0;bottom:0;
+            background-color: rgba(255,255,255,0.7);
+            z-index:9999;
+            display:none;
+        }
+
+        @-webkit-keyframes spin {
+        	from {-webkit-transform:rotate(0deg);}
+        	to {-webkit-transform:rotate(360deg);}
+        }
+
+        @keyframes spin {
+        	from {transform:rotate(0deg);}
+        	to {transform:rotate(360deg);}
+        }
+
+        #cover-spin::after {
+            content:'';
+            display:block;
+            position:absolute;
+            left:48%;top:40%;
+            width:40px;height:40px;
+            border-style:solid;
+            border-color:black;
+            border-top-color:transparent;
+            border-width: 4px;
+            border-radius:50%;
+            -webkit-animation: spin .8s linear infinite;
+            animation: spin .8s linear infinite;
+        }
+    </style>
     <script>
 
 
@@ -1271,6 +1309,22 @@
         }
         function enable() {
             document.querySelector('#senden').disabled = false;
+        }
+
+        // disable button after submit with spinner
+        var nameHackatho = document.getElementById("namhack");
+        var surveyPurpos = document.getElementById("surveyPurp");
+        var organiz = document.getElementById("orgi");
+        var contactPer = document.getElementById("conper");
+        var hackathonTh = document.getElementById("hackth");
+        var emailOrga = document.getElementById("em");
+        var dat = document.getElementById("dateControl");
+        var urlEv = document.getElementById("ur");
+
+        function spinner(){
+            if(nameHackatho.value && surveyPurpos.value && organiz.value && contactPer.value && hackathonTh.value && em.value && dateControl.value && ur.value){
+                $('#cover-spin').show(0)
+            }
         }
     </script>
 </html>
